@@ -1,0 +1,11 @@
+---
+- hosts: CSR1K
+  tasks:
+  - name: Show version
+    ios_command:
+      commands: show ver
+    register: version
+  - name: Save version
+    copy:
+      content: "{{ version.stdout[0] }}"
+      dest: "/home/traversa/automation/backup/{{ inventory_hostname }}-version.txt"

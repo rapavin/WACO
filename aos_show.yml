@@ -1,0 +1,9 @@
+---
+- name: Test
+  hosts: aos_switch
+  collections:
+    - arubanetworks.aos_switch
+  tasks:
+    - name: show ver
+      arubaoss_command:
+        commands: show ver

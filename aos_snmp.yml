@@ -1,0 +1,23 @@
+---
+- hosts: ancillary
+  tasks:
+    - name: Config SNMP community manager
+      arubaoss_snmp:
+        community_name: s17Y0fSTch@r3LS
+        access_type: UT_MANAGER
+        restricted: False
+    - name: Config SNMP Server
+      arubaoss_snmp:
+        community_name: s17Y0fSTch@r3LS
+        host_ip: "{{item}}"
+      with_items:
+        - 10.1.42.16
+        - 10.1.43.82
+    - name: Config SNMP community oeprator
+      arubaoss_snmp:
+        community_name: cosc_7384
+        access_type: UT_OPERATOR
+        restricted: False
+  
+        
+

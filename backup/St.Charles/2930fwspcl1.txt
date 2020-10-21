@@ -1,0 +1,113 @@
+command: show ver
+response: Image stamp:   
+ /ws/swbuildm/rel_yakima_qaoff/code/build/lvm(swbuildm_rel_yakima_qaoff_rel_yaki
+ma)
+                Jun 26 2020 06:00:08
+                WC.16.08.0014
+                861
+Boot Image:     Primary
+
+Boot ROM Version:    WC.16.01.0006
+Active Boot ROM:     Primary
+------------------------------------------
+command: show run
+response: Running configuration:
+
+; JL255A Configuration Editor; Created on release #WC.16.08.0014
+; Ver #14:27.6f.f8.1d.9b.3f.bf.bb.ef.7c.59.fc.6b.fb.9f.fc.ff.ff.37.ef:04
+hostname "WSP-CL1-2930F"
+module 1 type jl255a
+timesync ntp
+ntp unicast
+ntp server 10.1.42.20
+ntp enable
+no telnet-server
+no web-management
+ip authorized-managers 0.0.0.0 0.0.0.0 access manager
+ip authorized-managers 10.1.250.240 255.255.255.0 access manager
+ip authorized-managers 10.1.250.241 255.255.255.0 access manager
+ip authorized-managers 10.1.250.242 255.255.255.0 access manager
+ip authorized-managers 10.1.250.243 255.255.255.0 access manager
+ip authorized-managers 10.1.250.244 255.255.255.0 access manager
+ip authorized-managers 10.1.250.245 255.255.255.0 access manager
+ip dns domain-name "ci.st-charles.il.us"
+ip dns server-address priority 1 10.1.42.20
+ip dns server-address priority 2 10.1.42.152
+ip source-interface telnet vlan 10
+interface 22
+   name "EOC_CAMERA"
+   exit
+snmp-server community "s17Y0fSTch@r3LS" operator unrestricted
+snmp-server community "cosc_7384" operator unrestricted
+snmp-server host 10.1.42.16 community "s17Y0fSTch@r3LS"
+snmp-server host 10.1.43.82 community "s17Y0fSTch@r3LS"
+snmp-server trap-source 10.1.1.1
+snmp-server contact "Jason NG" location "Waste Water Treatment Plant"
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 1,3,5-23
+   untagged 24-28
+   tagged 2,4
+   ip address dhcp-bootp
+   ipv6 enable
+   ipv6 address dhcp full
+   exit
+vlan 2
+   name "COSC"
+   untagged 1,3,5-9,13-21,23
+   tagged 2,4
+   no ip address
+   exit
+vlan 5
+   name "VOIP"
+   tagged 1-9,13-21,23
+   no ip address
+   exit
+vlan 10
+   name "NET_MANAGE"
+   no ip address
+   exit
+vlan 12
+   name "VIDEO"
+   untagged 22
+   no ip address
+   exit
+vlan 18
+   name "BLDG_PWG"
+   untagged 4
+   no ip address
+   exit
+vlan 220
+   name "STC_WIFI"
+   no ip address
+   exit
+vlan 224
+   name "WIFI_WPA_DMZ"
+   no ip address
+   exit
+vlan 303
+   name "STP_SCADA"
+   untagged 2,10-12
+   tagged 4
+   no ip address
+   exit
+vlan 400
+   name "WIFI_DMZ"
+   no ip address
+   exit
+vlan 801
+   name "WIRELESS-DMZ"
+   no ip address
+   exit
+spanning-tree
+spanning-tree 24 bpdu-filter
+spanning-tree mode rapid-pvst
+spanning-tree bpdu-protection-timeout 300
+no tftp server
+no autorun
+no dhcp config-file-update
+no dhcp image-file-update
+no dhcp tr69-acs-url
+password manager
+password operator
+------------------------------------------

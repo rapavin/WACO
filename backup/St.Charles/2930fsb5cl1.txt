@@ -1,0 +1,91 @@
+command: show ver
+response: Image stamp:   
+ /ws/swbuildm/rel_yakima_qaoff/code/build/lvm(swbuildm_rel_yakima_qaoff_rel_yaki
+ma)
+                Jun 26 2020 06:00:08
+                WC.16.08.0014
+                861
+Boot Image:     Primary
+
+Boot ROM Version:    WC.17.02.0006
+Active Boot ROM:     Primary
+------------------------------------------
+command: show run
+response: Running configuration:
+
+; JL320A Configuration Editor; Created on release #WC.16.08.0014
+; Ver #14:27.6f.f8.1d.9b.3f.bf.bb.ef.7c.59.fc.6b.fb.9f.fc.ff.ff.37.ef:04
+
+hostname "SB5-CL1-2930F"
+module 1 type jl320a
+flexible-module A type JL083A
+snmp-server community "public" unrestricted
+snmp-server contact "Jason NG" location "Substation 5"
+oobm
+   ip address dhcp-bootp
+   ipv6 enable
+   ipv6 address dhcp full
+   exit
+vlan 1
+   name "DEFAULT_VLAN"
+   untagged 1-24,A1-A4
+   ip address dhcp-bootp
+   ipv6 enable
+   ipv6 address dhcp full
+   exit
+vlan 2
+   name "COSC"
+   no ip address
+   exit
+vlan 5
+   name "VOIP"
+   no ip address
+   exit
+vlan 10
+   name "NET_MANAGE"
+   no ip address
+   exit
+vlan 13
+   name "BLDG_FD2"
+   no ip address
+   exit
+vlan 15
+   name "BLDG_CST"
+   no ip address
+   exit
+vlan 220
+   name "STC_WIFI"
+   no ip address
+   exit
+vlan 224
+   name "WIFI_WPA_DMZ"
+   no ip address
+   exit
+vlan 301
+   name "ELECTRIC_SCADA"
+   no ip address
+   exit
+vlan 302
+   name "ELECTRIC_IPNET"
+   no ip address
+   exit
+vlan 400
+   name "WIFI_DMZ"
+   no ip address
+   exit
+vlan 700
+   name "Intergov"
+   no ip address
+   exit
+vlan 801
+   name "WIRELESS-DMZ"
+   no ip address
+   exit
+no tftp server
+no autorun
+no dhcp config-file-update
+no dhcp image-file-update
+no dhcp tr69-acs-url
+password manager
+password operator
+------------------------------------------

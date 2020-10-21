@@ -1,0 +1,683 @@
+command: show ver
+response: Image stamp:   
+ /ws/swbuildm/rel_yakima_qaoff/code/build/lvm(swbuildm_rel_yakima_qaoff_rel_yaki
+ma)
+                Jun 26 2020 06:00:08
+                WC.16.08.0014
+                861
+Boot Image:     Primary
+
+Boot ROM Version:    WC.17.02.0006
+Active Boot ROM:     Primary
+------------------------------------------
+command: show run
+response: Running configuration:
+
+; hpStack_WC Configuration Editor; Created on release #WC.16.08.0014
+; Ver #14:27.6f.f8.1d.9b.3f.bf.bb.ef.7c.59.fc.6b.fb.9f.fc.ff.ff.37.ef:04
+
+stacking
+   member 1 type "R0M67A" mac-address b8d4e7-bd4200
+   member 1 priority 255
+   member 1 flexible-module A type JL083A
+   member 2 type "R0M67A" mac-address b8d4e7-bccac0
+   member 2 priority 245
+   member 2 flexible-module A type JL083A
+   member 3 type "R0M67A" mac-address b8d4e7-bfa080
+   member 3 priority 235
+   member 3 flexible-module A type JL083A
+   member 4 type "R0M67A" mac-address b8d4e7-bcc9c0
+   member 4 priority 225
+   member 4 flexible-module A type JL083A
+   exit
+hostname "PWG-D226-2930M"
+no rest-interface
+trunk 1/A4,4/A4 trk1 lacp
+interface 1/1
+   name "LINE_CREW_COPIER"
+   exit
+interface 1/2
+   name "PWG-VG200-PRI"
+   exit
+interface 1/3
+   name "EL-SCADA MASTER"
+   exit
+interface 1/4
+   name "EL-SCADA MASTER FEP"
+   exit
+interface 1/5
+   name "SCADA_HOST"
+   exit
+interface 1/6
+   name "IDS_WAN"
+   exit
+interface 1/7
+   name "EXACQ_IN"
+   exit
+interface 1/8
+   name "DON_HENRY"
+   exit
+interface 1/9
+   name "Meter_Laptop"
+   exit
+interface 1/10
+   name "PWG-FL2-1131AG-1"
+   exit
+interface 1/11
+   name "172_EL_LAB"
+   exit
+interface 1/12
+   name "EASTSIDE_LIFT"
+   speed-duplex 100-full
+   exit
+interface 1/14
+   name "PWG-CM"
+   exit
+interface 1/15
+   name "PWG-CLST-SRV4-HVLIVE"
+   exit
+interface 1/16
+   name "PWG-CL1-2921"
+   exit
+interface 1/19
+   name "To D226-3524PWR"
+   exit
+interface 1/20
+   name "To 356048-PS"
+   exit
+interface 1/23
+   name "WESTSIDE_DECK"
+   exit
+interface 1/24
+   name "COMCAST_INTERNET"
+   exit
+interface 1/25
+   name "COMCAST_INTERNET"
+   exit
+interface 1/26
+   name "TO PWG_VERIZON_COMCAST"
+   exit
+interface 1/27
+   name "KIOSK_PC"
+   exit
+interface 1/28
+   name "Printer Port"
+   exit
+interface 1/29
+   name "KIOSK_PC"
+   exit
+interface 1/30
+   name "PRINTER_PORT"
+   exit
+interface 1/31
+   name "PWG-CLST-SRV4-HVDMZ"
+   exit
+interface 1/32
+   name "PRINTER_PORT"
+   exit
+interface 1/33
+   name "TO G0/0 on PWG-VERIZON 240.3"
+   speed-duplex 100-full
+   exit
+interface 1/34
+   name "PRINTER_PORT"
+   exit
+interface 1/35
+   name "WEATHERDUCK"
+   exit
+interface 1/36
+   name "ATT_REPEATER"
+   exit
+interface 1/37
+   name "EL_VOYAGER_DMZ"
+   exit
+interface 1/38
+   name "CLST-SRV5-HVLIVE"
+   exit
+interface 1/39
+   name "CLST-SRV5-HVSQL"
+   exit
+interface 1/40
+   name "KIOSK_SWITCH"
+   exit
+interface 1/41
+   name "KIOSK_PC"
+   exit
+interface 1/42
+   name "KIOSK_PC"
+   exit
+interface 1/43
+   name "CLST-SRV5-HVDMZ"
+   exit
+interface 1/44
+   name "CLST-SRV4-SRVBB"
+   exit
+interface 1/46
+   name "TO_SUB8"
+   exit
+interface 1/47
+   name "SB6-3750"
+   exit
+interface 1/A4
+   name "Uplink to PWG-D226-CORE-8325"
+   exit
+interface 2/1
+   name "MVanDeMark"
+   exit
+interface 2/2
+   name "KEYSCAN"
+   exit
+interface 2/4
+   name "J.BORN"
+   exit
+interface 2/6
+   name "JIM_161_ESCADA"
+   exit
+interface 2/11
+   name "PHOPKINS_SCADA"
+   exit
+interface 2/12
+   name "ERIKA_159B_ESCADA"
+   exit
+interface 2/13
+   name "EXACQ_VIDEO"
+   exit
+interface 2/14
+   name "ISERIES_CONSOLE"
+   exit
+interface 2/16
+   name "PHOPKINS"
+   exit
+interface 2/17
+   name "IMEA"
+   exit
+interface 2/19
+   name "PWG-IC-2602i-1"
+   exit
+interface 2/20
+   name "PWG-IC-2602i-2"
+   exit
+interface 2/21
+   name "AP1231G 221.90"
+   exit
+interface 2/22
+   name "PWG-MTR-1310AG"
+   exit
+interface 2/24
+   name "AP-1121-D226"
+   exit
+interface 2/25
+   name "CLST-SRV5-SRVBB"
+   exit
+interface 2/26
+   name "CLST-SRV5-DATAKEEPER"
+   exit
+interface 2/27
+   name "CLST-SRV4-HVBB"
+   exit
+interface 2/28
+   name "WWSCADA_INTERNET"
+   exit
+interface 2/29
+   name "INTERGOV_VPN_INTERNET"
+   exit
+interface 2/30
+   disable
+   name "INTERGOV_VPN_INTERGOV"
+   exit
+interface 2/31
+   name "WWSCADA_Uplink"
+   exit
+interface 2/32
+   name "ERIKA_159A_FEP"
+   exit
+interface 2/33
+   name "AVOCENT-KVM"
+   exit
+interface 2/34
+   name "PWG-SAN-SWITCH"
+   exit
+interface 2/35
+   name "FortiGate_BACKBONE"
+   exit
+interface 2/37
+   name "CIMC_UCS"
+   exit
+interface 2/38
+   name "ESXI_UCS_port1"
+   exit
+interface 2/39
+   name "ESXI_UCS_port2"
+   exit
+interface 2/47
+   name "Exacq2-1"
+   exit
+interface 2/48
+   name "Exacq2-2"
+   exit
+interface 3/1
+   name "RADIX WORKSTATION"
+   exit
+interface 3/3
+   name "PRINTER PORT"
+   exit
+interface 3/9
+   name "KIOSK-6"
+   exit
+interface 3/11
+   name "PRINTER PORT"
+   exit
+interface 3/12
+   name "KIOSK"
+   exit
+interface 3/14
+   name "EL-SCADA OPENJAVA BACKBONE"
+   exit
+interface 3/16
+   name "PRINTER PORT"
+   exit
+interface 3/20
+   name "PRINTER PORT"
+   exit
+interface 3/21
+   name "AP-1121-FL2-Conference"
+   exit
+interface 3/22
+   name "WATER_SCADA1"
+   exit
+interface 3/23
+   name "AP"
+   exit
+interface 3/25
+   name "ATA186(U)"
+   exit
+interface 3/27
+   name "ATA186 7064"
+   exit
+interface 3/29
+   name "WATER SCADA SLC/505"
+   exit
+interface 3/32
+   name "KIOSK_DESK_PHONE"
+   exit
+interface 3/33
+   name "VERIZON EXTENDER"
+   exit
+interface 3/34
+   name "K_DOBBS"
+   exit
+interface 3/35
+   name "RADIX HANDHELD CRADLE"
+   exit
+interface 3/36
+   name "AP-1121-INVENTORY"
+   exit
+interface 3/37
+   name "AP-1121-FLEET"
+   exit
+interface 3/38
+   name "ATA186 7003,3674"
+   exit
+interface 3/40
+   name "PRINTER PORT"
+   exit
+interface 3/47
+   name "EATON_9170"
+   exit
+interface 3/48
+   name "ATA186 FLEET"
+   exit
+interface 4/1
+   name "FortiGate_MGMT"
+   exit
+interface 4/2
+   name "FortiGate_ATT"
+   exit
+interface 4/3
+   name "FortiGate_COMCAST"
+   exit
+interface 4/5
+   name "ForitGate_UBPAYMENTS"
+   exit
+interface 4/6
+   name "FortiGate_ESCADA"
+   exit
+interface 4/7
+   name "FortiGate_DMZ"
+   exit
+interface 4/8
+   name "PWG-CLST-SRV1-DK"
+   exit
+interface 4/9
+   name "PWG-CLST-SRV2-BB"
+   exit
+interface 4/10
+   name "PWG-CLST-SRV2-DK"
+   exit
+interface 4/11
+   name "ISERIES"
+   exit
+interface 4/12
+   name "PWG-CLST-SRV2-HVLIVE"
+   exit
+interface 4/13
+   name "PWG-CLST-SRV1-BB"
+   exit
+interface 4/14
+   name "PWG-CLST-SRV2-HVBB"
+   exit
+interface 4/15
+   name "PWG-CLST-SRV2-HVDMZ"
+   exit
+interface 4/16
+   name "PWG-CLST-SRV1-HVLIVE"
+   exit
+interface 4/17
+   name "PWG-CLST-SRV1-HVBB"
+   exit
+interface 4/18
+   name "PWG-CLST-SRV1-HVDMZ"
+   exit
+interface 4/19
+   name "PWG-CLST-SRV4_DK"
+   exit
+interface 4/20
+   name "FortiGate_INTERGOV"
+   exit
+interface 4/21
+   name "FortiGate_KANEFIBER"
+   exit
+interface 4/22
+   name "IDOT-GARAGE"
+   speed-duplex 100-full
+   exit
+interface 4/23
+   name "PWG-CLST-SRV1-HVSQL"
+   exit
+interface 4/24
+   name "PWG-CLST-SRV2-HVSQL"
+   exit
+interface 4/25
+   name "PWG-CLST-SRV3_BB"
+   exit
+interface 4/26
+   name "PWG-P2000G3-MGMT2"
+   exit
+interface 4/27
+   name "PWG-P2000G3-MGMT"
+   exit
+interface 4/28
+   name "ISERIES"
+   exit
+interface 4/29
+   name "ELECTRIC_SCADA_VPN_ROUTER"
+   exit
+interface 4/30
+   name "PWG-CLST-SRV4-HVSQL"
+   exit
+interface 4/31
+   name "PWG-CLSRV2-HVLIVE"
+   exit
+interface 4/32
+   name "PWG-CLSRV2-HVBB"
+   exit
+interface 4/33
+   name "FortiGate_VZWPRIVATE"
+   exit
+interface 4/34
+   name "PWG-CLST-SRV3-DK"
+   exit
+interface 4/35
+   name "PWG-FL2-1252N"
+   exit
+interface 4/36
+   name "IC-KIOSK"
+   exit
+interface 4/37
+   name "CLST-SRV5-HVBB"
+   exit
+interface 4/38
+   name "METER DEPT LAPTOP"
+   exit
+interface 4/39
+   name "PWG-CLST-SRV4_BB"
+   exit
+interface 4/40
+   name "ISERIES"
+   exit
+interface 4/41
+   name "FortiGate_FREEINET"
+   exit
+interface 4/42
+   name "FortiGate_HA1"
+   exit
+interface 4/43
+   name "PWG-CLSRV2-HVDMZ"
+   exit
+interface 4/44
+   name "PWG-CLSRV2-HVSQL"
+   exit
+interface 4/45
+   name "FortiGate_HA2"
+   exit
+interface 4/46
+   name "ISERIES_CONSOLE"
+   exit
+interface 4/A4
+   name "Uplink to PD-DC-CORE-8325"
+   exit
+snmp-server contact "Jason NG" location "PWG D226"
+oobm
+   ip address dhcp-bootp
+   ipv6 enable
+   ipv6 address dhcp full
+   member 1
+      ip address dhcp-bootp
+      ipv6 enable
+      ipv6 address dhcp full
+      exit
+   member 2
+      ip address dhcp-bootp
+      ipv6 enable
+      ipv6 address dhcp full
+      exit
+   member 3
+      ip address dhcp-bootp
+      ipv6 enable
+      ipv6 address dhcp full
+      exit
+   member 4
+      ip address dhcp-bootp
+      ipv6 enable
+      ipv6 address dhcp full
+      exit
+   exit
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged
+ 1/1-1/18,1/21-1/22,1/24-1/44,1/48,2/1-2/16,2/18-2/30,2/32-2/48,3/1-3/48,4/1-4/4
+8
+   untagged
+ 1/19-1/20,1/23,1/45-1/47,1/A1-1/A3,2/17,2/31,2/A1-2/A4,3/A1-3/A4,4/A1-4/A3
+   tagged Trk1
+   ip address dhcp-bootp
+   ipv6 enable
+   ipv6 address dhcp full
+   exit
+vlan 2
+   name "COSC"
+   untagged
+ 1/1,1/6,1/9,1/13,1/17-1/18,1/21-1/22,1/27-1/30,1/32,1/34-1/35,1/40-1/42,1/44,1/
+48,2/1-2/3,2/14,2/25,2/27-2/28,2/33-2/36,2/40-2/46,3/1,3/11,3/16,3/28,3/32,3/34-
+3/35,3/37-3/38,3/40,3/43-3/44,3/46-3/47,4/4,4/9,4/11,4/13-4/14,4/17,4/22,4/25-4/
+28,4/32,4/36-4/37,4/39-4/40,4/46-4/48
+   tagged
+ 1/2,1/4,1/8,1/19-1/20,1/24,1/45-1/47,2/16,3/2-3/10,3/13-3/15,3/17-3/22,3/24,3/2
+6,3/29-3/31,3/36,3/39,3/41-3/42,3/45,3/48,Trk1
+   no ip address
+   exit
+vlan 3
+   name "DMZ_01"
+   untagged 1/31,1/37,1/43,4/7,4/15,4/18,4/43
+   tagged 1/19-1/20,1/24,1/45-1/47,Trk1
+   no ip address
+   exit
+vlan 5
+   name "VOIP"
+   untagged 1/2,1/14,1/16,2/37-2/39,3/25,3/27
+   tagged
+ 1/3-1/4,1/8,1/10,1/12-1/13,1/17-1/24,1/35,1/45-1/48,2/1,2/3-2/5,2/7-2/10,2/15-2
+/16,2/18,2/23,2/36,2/40-2/46,3/1-3/22,3/24,3/26,3/28-3/48,4/4,4/22,4/47-4/48,Trk
+1
+   no ip address
+   exit
+vlan 9
+   name "HV_LIVE"
+   untagged 1/15,1/38,4/12,4/16,4/31
+   tagged 1/19-1/20,1/24,1/45-1/47,Trk1
+   no ip address
+   exit
+vlan 10
+   name "NET_MANAGE"
+   untagged 4/1,Trk1
+   tagged 1/19-1/20,1/23-1/24,1/45-1/47,4/22
+   ip address 10.10.2.151 255.255.0.0
+   exit
+vlan 11
+   name "FW_FAILOVER"
+   untagged 4/42,4/45
+   tagged 1/19-1/20,1/24,1/45-1/47,Trk1
+   no ip address
+   exit
+vlan 12
+   name "VIDEO"
+   untagged 1/7,2/13,2/47-2/48
+   tagged 1/19-1/20,1/23-1/24,1/45-1/47,Trk1
+   no ip address
+   exit
+vlan 15
+   name "BLDG_CST"
+   tagged 1/10,1/19-1/20,1/24,1/45-1/47,Trk1
+   no ip address
+   exit
+vlan 18
+   name "BLDG_PWG"
+   untagged
+ 1/8,2/4-2/5,2/7-2/10,2/15-2/16,2/18,2/23,3/2-3/10,3/12-3/15,3/17-3/22,3/24,3/26
+,3/29-3/31,3/36,3/39,3/41-3/42,3/45,3/48,4/38
+   tagged 1/19-1/20,1/24,1/45-1/47,Trk1
+   no ip address
+   exit
+vlan 25
+   name "SQL1"
+   untagged 1/39,4/23-4/24,4/30,4/44
+   tagged 1/19-1/20,1/24,1/45-1/47,Trk1
+   no ip address
+   exit
+vlan 28
+   name "UB_PAYMENTS"
+   untagged 4/5
+   tagged 1/19-1/20,1/24,1/45-1/47,Trk1
+   no ip address
+   exit
+vlan 69
+   name "Steel_Eye"
+   untagged 2/26,4/8,4/10,4/19,4/34
+   tagged 1/19-1/20,1/24,1/45-1/47,Trk1
+   no ip address
+   exit
+vlan 220
+   name "STC_WIFI"
+   tagged 1/10,1/19-1/20,1/23-1/24,1/45-1/47,Trk1
+   no ip address
+   exit
+vlan 224
+   name "WIFI_WPA_DMZ"
+   tagged 1/10,1/19-1/20,1/23-1/24,1/45-1/47,Trk1
+   no ip address
+   exit
+vlan 240
+   name "VZW_PRIVATE"
+   untagged 1/33,4/33
+   tagged 1/19-1/20,1/24,1/45-1/47,Trk1
+   no ip address
+   exit
+vlan 248
+   name "ATT_DSL_2"
+   untagged 1/36,3/33
+   no ip address
+   exit
+vlan 249
+   name "Comcast_Backup_ISP"
+   untagged 1/24-1/25
+   tagged 1/19-1/20,1/45-1/47,Trk1
+   no ip address
+   exit
+vlan 250
+   name "ATT_INTERNET"
+   untagged 2/29,4/2,4/29
+   tagged 1/19-1/20,1/24,1/45-1/47,Trk1
+   no ip address
+   exit
+vlan 251
+   name "Comcast Backup"
+   untagged 1/26,4/3
+   tagged 1/19-1/20,1/24,1/45-1/47,Trk1
+   no ip address
+   exit
+vlan 300
+   name "WATER_SCADA"
+   tagged 1/19-1/20,1/24,1/45-1/47,2/31,Trk1
+   no ip address
+   exit
+vlan 301
+   name "ELECTRIC_SCADA"
+   untagged 1/4,1/11,2/32
+   tagged 1/19-1/20,1/24,1/45-1/47,Trk1
+   no ip address
+   exit
+vlan 302
+   name "ELECTRIC_IPNET"
+   untagged 1/3,1/5,2/6,2/11-2/12,4/6
+   tagged 1/19-1/20,1/24,1/45-1/47,Trk1
+   no ip address
+   exit
+vlan 303
+   name "STP_SCADA"
+   untagged 1/12
+   tagged 1/19-1/20,1/24,1/45-1/47,2/31,Trk1
+   no ip address
+   exit
+vlan 400
+   name "WIFI_DMZ"
+   untagged 1/10,2/19-2/22,2/24,3/23,4/35
+   tagged 1/19-1/20,1/23-1/24,1/45-1/47,Trk1
+   no ip address
+   exit
+vlan 700
+   name "Intergov"
+   untagged 2/30,4/20
+   tagged 1/19-1/20,1/24,1/45-1/47,Trk1
+   no ip address
+   exit
+vlan 720
+   name "Kane-Fiber"
+   untagged 4/21
+   tagged 1/19-1/20,1/24,1/45-1/47,Trk1
+   no ip address
+   exit
+vlan 801
+   name "WIRELESS-DMZ"
+   untagged 4/41
+   tagged 1/10,1/19-1/20,1/24,1/45-1/47,Trk1
+   no ip address
+   exit
+spanning-tree Trk1 priority 4
+no tftp server
+no autorun
+no dhcp config-file-update
+no dhcp image-file-update
+no dhcp tr69-acs-url
+password manager
+password operator
+------------------------------------------

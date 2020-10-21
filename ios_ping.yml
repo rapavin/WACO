@@ -1,0 +1,18 @@
+---
+- hosts: CSR1K_01
+  tasks:
+  - name: Ping 192.168.0.2
+    ios_ping:
+      dest: 192.168.0.2
+      count: 10
+    register: ping
+  - name: debug
+    debug:
+      msg: "{{ ping }}"
+
+- hosts: CSR1K_02
+  tasks:
+  - name: Ping 192.168.0.1
+    ios_ping:
+      dest: 192.168.0.1
+      state: present

@@ -1,0 +1,10 @@
+---
+- hosts: access
+  tasks:
+  - name: Config STP 
+    arubaoss_stp:
+      config: "create"
+      command: config_spanning_tree
+      mode: STM_RPVST
+
+

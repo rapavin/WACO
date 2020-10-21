@@ -1,0 +1,9 @@
+---
+- hosts: 2930mnchcl1
+  tasks:
+  - name: Config banner
+    arubaoss_config:
+      lines:
+        - banner motd ^
+          "WARNING NOTICE
+          This system is restricted solely to City of St. Charles authorized users for legitimate City of St. Charles business purposes only. The City of St. Charles strictly prohibits the actual or attempted unauthorized access, use or modification of this system. Unauthorized usage and/or users are subject to disciplinary proceedings and/or criminal and civil penalties under State, Federal, or other applicable domestic and foreign laws. The use of this system may be monitored and recorded for administrative and security reasons. Anyone accessing this system expressly consents to such monitoring and is advised that if monitoring reveals possible evidence of criminal activity, such activity will be provided to law enforcement officials."^

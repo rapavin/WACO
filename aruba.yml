@@ -1,0 +1,6 @@
+---
+- hosts: 3810pwgscata
+  tasks:
+  - name: Config from Jinja2 template
+    arubaoss_config:
+      src: /home/traversa/automation/st.j2

@@ -1,0 +1,24 @@
+---
+- hosts: CSR1K
+  tasks:
+  - name: Static route
+    ios_static_route:
+      prefix: 0.0.0.0
+      mask: 0.0.0.0
+      next_hop: 10.210.210.1
+  - name: show ip route
+    ios_command:
+      commands: show ip route
+    register: route
+  - name: route
+    debug:
+      msg: "{{ route }}"
+  - name: Ping test
+    ios_ping:
+      dest: 8.8.8.8
+      count: 10
+    register: ping
+  - name: Debug
+    debug: 
+      msg: "{{ ping }}"
+

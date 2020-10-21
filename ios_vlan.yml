@@ -1,0 +1,25 @@
+---
+- hosts: Cat9K
+  tasks:
+  - name: Create Vlan
+    ios_vlan: 
+      vlan_id: 10
+      name: test-vlan
+  - name: Add interfaces to Vlan
+    ios_vlan:
+      vlan_id: 10
+      interfaces:
+        - tenGigabitEthernet1/0/1
+        - tenGigabitEthernet1/0/2
+    register: vlan
+  - name: Debug
+    debug:
+      msg: "{{ vlan }}"
+    
+
+    # Using Aggregate to Add Vlan
+  - name: Add vlan using aggregate
+    ios_vlan:
+      aggregate:
+      - { vlan_id: 100, name: test-vlan2, delay: 15, state: suspend }
+      - { vlan_id: 101, name: test-vlan3 }

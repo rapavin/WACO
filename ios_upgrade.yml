@@ -1,0 +1,78 @@
+---
+- name: Upgrade IOS
+  hosts: Cat9K
+  vars: 
+    upgrade_ios_version: "16.12.04"
+  tasks: 
+  - name: Verify current version
+    ios_facts:
+  - debug:
+      msg:
+      - "Current version is {{ ansible_net_version }}"
+      - "Upgrade image is 16.12.04"
+  - debug:
+      msg:
+      - "Image is not compliant and will be upgrade"
+    when: ansible_net_version != upgrade_ios_version
+
+- hosts: localhost
+  tasks:
+  - name: Get ansible Date/time facts
+    setup:
+      filter: "ansible_date_time"
+      gather_subset: "!all"
+  - name: Store DTG as fact
+    set_fact:
+      DTG: "{{ ansible_date_time.date }}"
+- hosts: Cat9K
+  tasks:
+  - name: Backup running config
+    ios_command:
+      commands: show run
+    register: config
+  - name: Save to bakcup
+    copy:
+      content: "{{ config.stdout[0] }}"
+      dest: "/home/traversa/automation/backup/{{ hostvars.localhost.DTG }}/{{ inventory_hostname }}-{{ hostvars.localhost.DTG }}-config.txt"
+  - name: Save running config
+    ios_config:
+      save_when: always
+- name: Copy image
+    net_put:
+      src: "/home/traversa/image/cat9k_iosxe.16.12.04.SPA.bin"
+      dest: "flash:cat9k_iosxe.16.12.04.SPA.bin"
+    vars:
+      ansible_command_timeout: 1500
+  - name: Change Boot variable to new image
+    ios_config:
+      commands:
+        - "boot system flash:cat9k_iosxe.16.12.04.SPA.bin"
+      save_when: always
+  - name: Reload  
+    ios_command:
+      commands:
+      - command: reload
+        prompt: '[confirm]'
+        answer: 'y'
+  - name: Wait come back online
+    wait_for:
+      host: "{{ inventory_hostname }}"
+      port: 22
+      delay: 90
+      timeout: 900
+    delegate_to: localhost
+  - name: Check Image version
+    ios_facts:
+  - debug:
+      msg:
+      - "current version is {{ ansible_net_version }}"
+  - name: Assert OS version is correct
+    vars:
+      upgrade_ios_version: "16.12.04"
+    assert:
+      that:
+      - upgrade_ios_version == ansible_net_version
+  - debug:
+      msg:
+      - "Software upgrade successfully"
+

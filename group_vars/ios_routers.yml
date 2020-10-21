@@ -1,0 +1,4 @@
+---
+# default connectivity variables
+ansible_network_os: "ios"
+ansible_connection: "network_cli"

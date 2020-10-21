@@ -1,0 +1,48 @@
+---
+all:
+  children:
+    routers:
+      children:
+        ios_routers:
+          children:
+            CSR1K:
+              hosts:
+                CSR1K_01: 
+                  ansible_host: "10.210.210.11"
+                CSR1K_02: 
+                  ansible_host: "10.210.210.12"
+                CSR1K_03: 
+                  ansible_host: "10.210.210.13"
+    switches:
+      children:
+        ios_switches:
+          children:
+            Cat9K:
+              hosts:
+                C9300_01:
+                  ansible_host: "10.210.210.21"
+            Cat3750:
+              hosts:
+                C3750_24_01:
+                  ansible_host: "10.210.210.151"
+            vIOSsw:
+              hosts:
+                vIOSsw_01:
+                  ansible_host: "10.210.210.14"
+                vIOSsw_02: 
+                  ansible_host: "10.210.210.15"
+        aos_switches:
+          children:
+            3810M:
+              hosts:
+                3810M_01:
+                  ansible_host: "10.101.101.100"
+            2930M:
+              hosts:
+                2930M_01: 
+                  ansible_host: "10.101.101.112"
+
+
+
+                  
+

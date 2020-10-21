@@ -1,0 +1,11 @@
+---
+- name: banner
+  hosts: acx_switch
+  collections: 
+    - arubanetworks.aoscx
+  tasks:
+    - name: Add Banner
+      aoscx_banner:
+        banner_type: banner
+        banner: "Traversa Rocks!"
+

@@ -1,0 +1,7 @@
+---
+- hosts: CSR1K
+  gather_facts: False
+  tasks:
+  - name: Config from Jinja2
+    ios_config:
+      src: "/home/traversa/automation/CSR.j2"

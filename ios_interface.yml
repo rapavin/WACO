@@ -1,0 +1,14 @@
+---
+- hosts: Cat9K
+  tasks:
+  - name:
+    ios_interfaces:
+      config:
+        - name: tenGigabitEthernet1/0/11
+          description: 'Connected from Traversa to the World'
+          speed: '10000'
+        - name: tenGigabitEthernet1/0/12
+          description: 'Connected from Traversa to the World'
+          enabled: True
+          mtu: '9100'
+        

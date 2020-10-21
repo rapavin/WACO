@@ -1,0 +1,362 @@
+command: show ver
+response: Image stamp:   
+ /ws/swbuildm/rel_yakima_qaoff/code/build/lvm(swbuildm_rel_yakima_qaoff_rel_yaki
+ma)
+                Jun 26 2020 06:00:08
+                WC.16.08.0014
+                861
+Boot Image:     Primary
+
+Boot ROM Version:    WC.17.02.0006
+Active Boot ROM:     Primary
+------------------------------------------
+command: show run
+response: Running configuration:
+
+; hpStack_WC Configuration Editor; Created on release #WC.16.08.0014
+; Ver #14:27.6f.f8.1d.9b.3f.bf.bb.ef.7c.59.fc.6b.fb.9f.fc.ff.ff.37.ef:04
+
+stacking
+   member 1 type "R0M67A" mac-address b8d4e7-bda280
+   member 1 priority 255
+   member 1 flexible-module A type JL083A
+   member 2 type "R0M67A" mac-address 104f58-f93080
+   member 2 priority 245
+   member 2 flexible-module A type JL083A
+   member 3 type "R0M67A" mac-address b8d4e7-ba5a80
+   member 3 priority 235
+   member 3 flexible-module A type JL083A
+   exit
+hostname "CST-CL3-2930M"
+trunk 1/A4,3/A4 trk1 lacp
+banner motd "WARNING NOTICE\nThis system is restricted solely to City of St.
+ Charles authorized users for legitimate City of St. Charles business purposes
+ only. The City of St. Charles strictly prohibits the actual or attempted
+ unauthorized access, use or modification of this system. Unauthorized usage
+ and/or users are subject to disciplinary proceedings and/or criminal and civil
+ penalties under State, Federal, or other applicable domestic and foreign laws.
+ The use of this system may be monitored and recorded for administrative and
+ security reasons. Anyone accessing this system expressly consents to such
+ monitoring and is advised that if monitoring reveals possible evidence of
+ criminal activity, such activity will be provided to law enforcement
+ officials.\n"
+timesync ntp
+ntp unicast
+ntp server 10.1.42.20
+ntp enable
+no telnet-server
+no web-management
+ip authorized-managers 0.0.0.0 0.0.0.0 access manager
+ip authorized-managers 10.1.250.240 255.255.255.0 access manager
+ip authorized-managers 10.1.250.241 255.255.255.0 access manager
+ip authorized-managers 10.1.250.242 255.255.255.0 access manager
+ip authorized-managers 10.1.250.243 255.255.255.0 access manager
+ip authorized-managers 10.1.250.244 255.255.255.0 access manager
+ip authorized-managers 10.1.250.245 255.255.255.0 access manager
+ip default-gateway 10.1.1.4
+ip dns domain-name "ci.st-charles.il.us"
+ip dns server-address priority 1 10.1.42.20
+ip dns server-address priority 2 10.1.42.152
+ip source-interface telnet vlan 10
+interface 1/2
+   name "SWEISHAAR_WEBSWITCH"
+   exit
+interface 1/3
+   name "ATA187"
+   exit
+interface 1/5
+   name "STEVE_3-12B"
+   exit
+interface 1/6
+   name "AP1121-FDADMIN"
+   exit
+interface 1/8
+   name "FD_TRAINING_PRINTER"
+   exit
+interface 1/9
+   name "AT&T FIBER 1841 Port 0"
+   speed-duplex 100-full
+   exit
+interface 1/16
+   name "FD_SONY_IPELA_BB"
+   exit
+interface 1/18
+   name "ATT_DSL"
+   exit
+interface 1/19
+   name "VERIZON_NE"
+   exit
+interface 1/23
+   name "IS_COPIER"
+   exit
+interface 1/24
+   name "KEYSCAN"
+   exit
+interface 1/25
+   name "FD_ADMIN_PRINTER"
+   exit
+interface 1/26
+   name "GIS_DESIGNJET"
+   exit
+interface 1/27
+   name "341B"
+   exit
+interface 1/28
+   name "MGMT_TEMP"
+   exit
+interface 1/29
+   name "TECH_TABLE_307A"
+   exit
+interface 1/30
+   name "TECHROOM-1250N"
+   exit
+interface 1/31
+   name "FIRE_COLOR_PRINTER"
+   exit
+interface 1/32
+   name "KNIGHTLINGER_PC"
+   exit
+interface 1/33
+   name "PORT_305B_JOHN_OFFICE"
+   exit
+interface 1/34
+   name "FD_RECEPTION_PRINTER"
+   exit
+interface 1/35
+   name "ATA186_ARCHIVES"
+   exit
+interface 1/36
+   name "ATA186_FAX1"
+   exit
+interface 1/39
+   name "ATA186"
+   exit
+interface 1/40
+   name "IS_CONFERENCE_PHONE"
+   exit
+interface 1/45
+   name "TO CST-4948"
+   exit
+interface 1/A4
+   name "Uplink to PWG-D226-CORE-8325"
+   exit
+interface 2/3
+   name "LLAUDADIO"
+   exit
+interface 2/4
+   name "CGIBBONS"
+   exit
+interface 2/5
+   name "STORRES"
+   exit
+interface 2/7
+   name "MINIMAC-1"
+   exit
+interface 2/8
+   name "FISHBOWL"
+   exit
+interface 2/10
+   name "ATA187-IS_FOIA"
+   exit
+interface 2/13
+   name "IS_CONFERENCE_PHONE"
+   exit
+interface 2/14
+   name "CONSULTANT_DESK"
+   exit
+interface 2/16
+   name "STEVE_PHONE_PC"
+   exit
+interface 2/17
+   name "ECREIGHTON"
+   exit
+interface 2/18
+   name "TO CST_VERIZON_ATT"
+   exit
+interface 2/20
+   name "TO G0/0 on CST_VERIZON 240.2"
+   speed-duplex 100-full
+   exit
+interface 2/21
+   name "Conf RM Fire Training"
+   exit
+interface 2/22
+   name "CST-FL3-1261N"
+   exit
+interface 2/23
+   name "TEMP_SECURITY_AUDIT"
+   exit
+interface 2/24
+   name "3560-48P-48"
+   exit
+interface 2/25
+   name "3550-12G-6"
+   exit
+interface 2/26
+   name "TO CST-CL3-2960"
+   exit
+interface 3/A4
+   name "Uplink to PD-DC-CORE-8325"
+   exit
+snmp-server community "s17Y0fSTch@r3LS" operator unrestricted
+snmp-server community "cosc_7384" operator unrestricted
+snmp-server host 10.1.42.16 community "s17Y0fSTch@r3LS"
+snmp-server host 10.1.43.82 community "s17Y0fSTch@r3LS"
+snmp-server trap-source 10.1.1.1
+snmp-server contact "Jason NG" location "Century Station CL3"
+oobm
+   ip address dhcp-bootp
+   ipv6 enable
+   ipv6 address dhcp full
+   member 1
+      no ip address
+      ipv6 enable
+      ipv6 address dhcp full
+      exit
+   member 2
+      no ip address
+      ipv6 enable
+      ipv6 address dhcp full
+      exit
+   member 3
+      no ip address
+      ipv6 enable
+      ipv6 address dhcp full
+      exit
+   exit
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 1/1-1/4,1/6-1/15,1/17-1/44,1/46-1/48,2/1-2/19,2/21-2/23,2/27-2/28
+   untagged
+ 1/5,1/16,1/45,1/A1-1/A3,2/20,2/24-2/26,2/29-2/48,2/A1-2/A4,3/1-3/48,3/A1-3/A3
+   tagged Trk1
+   ip address dhcp-bootp
+   ipv6 enable
+   ipv6 address dhcp full
+   exit
+vlan 2
+   name "COSC"
+   untagged
+ 1/2-1/3,1/8,1/23-1/27,1/29,1/31,1/33-1/44,1/46-1/48,2/6-2/8,2/13-2/14,2/16
+   tagged 1/1,1/4,1/7,1/10-1/15,1/17,1/20-1/22,1/45,2/24-2/26,Trk1
+   no ip address
+   exit
+vlan 3
+   name "DMZ_01"
+   tagged 1/45,2/24-2/26,Trk1
+   no ip address
+   exit
+vlan 5
+   name "VOIP"
+   untagged 2/10
+   tagged
+ 1/1,1/3-1/5,1/7,1/10-1/15,1/17,1/20-1/22,1/33,1/35-1/48,2/1-2/2,2/8-2/9,2/11,2/
+13-2/17,2/19,2/21,2/24-2/28,Trk1
+   no ip address
+   exit
+vlan 10
+   name "NET_MANAGE"
+   untagged 1/28,Trk1
+   tagged 1/45,2/24-2/26
+   ip address 10.10.2.14 255.255.0.0
+   exit
+vlan 11
+   name "FW_FAILOVER"
+   tagged 1/45,2/24-2/26,Trk1
+   no ip address
+   exit
+vlan 12
+   name "VIDEO"
+   tagged 1/45,2/24-2/26,Trk1
+   no ip address
+   exit
+vlan 15
+   name "BLDG_CST"
+   untagged
+ 1/1,1/4,1/7,1/10-1/15,1/17,1/20-1/22,1/32,2/1-2/5,2/9,2/11-2/12,2/15,2/17,2/19,
+2/21,2/27-2/28
+   tagged 1/33,1/45,2/8,2/14,2/24-2/26,Trk1
+   no ip address
+   exit
+vlan 28
+   name "UB_PAYMENTS"
+   tagged 1/45,2/24-2/26,Trk1
+   no ip address
+   exit
+vlan 69
+   name "Steel_Eye"
+   tagged 1/45,2/24-2/26,Trk1
+   no ip address
+   exit
+vlan 220
+   name "STC_WIFI"
+   tagged 1/45,2/24-2/26,Trk1
+   no ip address
+   exit
+vlan 246
+   name "ATT_FIBERONLY"
+   untagged 1/9
+   tagged 1/45,2/24-2/26,Trk1
+   no ip address
+   exit
+vlan 248
+   name "ATT_DSL_2"
+   untagged 1/18-1/19
+   tagged 1/45,2/24-2/26,Trk1
+   no ip address
+   exit
+vlan 249
+   name "Comcast_Backup_ISP"
+   untagged 2/23
+   tagged 1/45,2/24-2/26,Trk1
+   no ip address
+   exit
+vlan 250
+   name "ATT_INTERNET"
+   untagged 2/18
+   tagged 1/45,2/24-2/26,Trk1
+   no ip address
+   exit
+vlan 251
+   name "Comcast Backup"
+   tagged 1/45,2/24-2/26,Trk1
+   no ip address
+   exit
+vlan 302
+   name "ELECTRIC_IPNET"
+   tagged 1/45,2/24-2/26,Trk1
+   no ip address
+   exit
+vlan 400
+   name "WIFI_DMZ"
+   untagged 1/6,1/30,2/22
+   tagged 1/45,2/24-2/26,Trk1
+   no ip address
+   exit
+vlan 700
+   name "Intergov"
+   tagged 1/45,2/24-2/26,Trk1
+   no ip address
+   exit
+vlan 720
+   name "Kane-Fiber"
+   tagged 1/45,2/24-2/26,Trk1
+   no ip address
+   exit
+vlan 801
+   name "WIRELESS-DMZ"
+   tagged 1/45,2/24-2/26,Trk1
+   no ip address
+   exit
+spanning-tree
+spanning-tree Trk1 priority 4
+spanning-tree mode rapid-pvst
+spanning-tree bpdu-protection-timeout 300
+no tftp server
+no autorun
+no dhcp config-file-update
+no dhcp image-file-update
+no dhcp tr69-acs-url
+password manager
+password operator
+------------------------------------------

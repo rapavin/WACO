@@ -1,0 +1,41 @@
+---
+# Static IP Address
+- hosts: CSR1K_01
+  tasks:
+  - name: Merge configuration
+    ios_l3_interfaces:
+      config:
+        - name: GigabitEthernet4
+          ipv4: 
+          - address: '192.168.0.1/30'
+      state: merged
+
+# DHCP
+- hosts: CSR1K_02
+  tasks:
+  - name: Replace
+    ios_l3_interfaces:
+      config:
+        - name: GigabitEthernet4
+          ipv4:
+          - address: dhcp
+            dhcp_hostname: 10.210.210.1
+      state: replaced
+# Delete
+- hosts: CSR1K_02
+  tasks:
+  - name: Delete
+    ios_l3_interfaces:
+      config:
+        - name: GigabitEthernet4
+      state: deleted
+# Overridden
+- hosts: CSR1K_02
+  tasks:
+  - name: Replaced
+    ios_l3_interfaces:
+      config:
+        - name: GigabitEthernet4
+          ipv4:
+          - address: '192.168.0.2/30'
+      state: replaced

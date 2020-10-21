@@ -1,0 +1,94 @@
+command: show ver
+response: Image stamp:   
+ /ws/swbuildm/rel_yakima_qaoff/code/build/lvm(swbuildm_rel_yakima_qaoff_rel_yaki
+ma)
+                Jun 26 2020 06:00:08
+                WC.16.08.0014
+                861
+Boot Image:     Primary
+
+Boot ROM Version:    WC.16.01.0006
+Active Boot ROM:     Primary
+------------------------------------------
+command: show run
+response: Running configuration:
+
+; JL255A Configuration Editor; Created on release #WC.16.08.0014
+; Ver #14:27.6f.f8.1d.9b.3f.bf.bb.ef.7c.59.fc.6b.fb.9f.fc.ff.ff.37.ef:04
+hostname "WTL-ATC-LAB"
+module 1 type jl255a
+ip dns domain-name "ci.st-charles.il.us"
+interface 3
+   name "PRINTER PORT"
+   exit
+interface 7
+   name "KEYSCAN_PANEL"
+   exit
+interface 11
+   name "TROTTER"
+   exit
+interface 12
+   name "TROTTER"
+   exit
+snmp-server community "public" unrestricted
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 1-23
+   untagged 24-28
+   ip address dhcp-bootp
+   ipv6 enable
+   ipv6 address dhcp full
+   exit
+vlan 2
+   name "COSC"
+   untagged 3-5,7
+   no ip address
+   exit
+vlan 5
+   name "VOIP"
+   untagged 1
+   tagged 2,4-6,8-10,13-23
+   no ip address
+   exit
+vlan 10
+   name "NET_MANAGE"
+   no ip address
+   exit
+vlan 18
+   name "BLDG_PWG"
+   untagged 2,6,8-10,13-23
+   no ip address
+   exit
+vlan 220
+   name "STC_WIFI"
+   no ip address
+   exit
+vlan 224
+   name "WIFI_WPA_DMZ"
+   no ip address
+   exit
+vlan 249
+   name "Comcast_Backup_ISP"
+   untagged 11-12
+   no ip address
+   exit
+vlan 303
+   name "STP_SCADA"
+   no ip address
+   exit
+vlan 400
+   name "WIFI_DMZ"
+   no ip address
+   exit
+vlan 801
+   name "WIRELESS-DMZ"
+   no ip address
+   exit
+no tftp server
+no autorun
+no dhcp config-file-update
+no dhcp image-file-update
+no dhcp tr69-acs-url
+password manager
+password operator
+------------------------------------------

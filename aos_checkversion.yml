@@ -1,0 +1,11 @@
+---
+- hosts: 2930mcstcl3
+  collections:
+    - arubanetworks.aos_switch
+  tasks:
+    - name: show ver
+      arubaoss_command: 
+        commands: 
+          - show ver
+        wait_for:
+          - result[0] contains " WC.16.08.0014"

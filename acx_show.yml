@@ -1,0 +1,13 @@
+---
+- name: show
+  hosts: acx_switch
+  collections:
+    - arubanetworks.aoscx
+  vars:
+    - ansible_connection: network_cli
+  tasks:
+    - name: Check version
+      aoscx_command:
+        commands: 'show version'
+          
+        

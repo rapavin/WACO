@@ -1,0 +1,6 @@
+command: show ver
+response: [Errno None] Unable to connect to port 22 on 10.10.2.19
+------------------------------------------
+command: show run
+response: [Errno None] Unable to connect to port 22 on 10.10.2.19
+------------------------------------------

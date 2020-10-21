@@ -1,0 +1,13 @@
+---
+- hosts: 3810M
+  collections:
+    - arubanetworks.aos_switch
+  tasks:
+    - name: upload image
+      arubaoss_command:
+        commands:
+          - enable
+          - copy usb flash KB_16_08_0014.swi secondary
+
+
+

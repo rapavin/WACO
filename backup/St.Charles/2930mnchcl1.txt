@@ -1,0 +1,324 @@
+command: show ver
+response: Image stamp:   
+ /ws/swbuildm/rel_yakima_qaoff/code/build/lvm(swbuildm_rel_yakima_qaoff_rel_yaki
+ma)
+                Jun 26 2020 06:00:08
+                WC.16.08.0014
+                861
+Boot Image:     Primary
+
+Boot ROM Version:    WC.17.02.0006
+Active Boot ROM:     Primary
+------------------------------------------
+command: show run
+response: Running configuration:
+
+; hpStack_WC Configuration Editor; Created on release #WC.16.08.0014
+; Ver #14:27.6f.f8.1d.9b.3f.bf.bb.ef.7c.59.fc.6b.fb.9f.fc.ff.ff.37.ef:04
+
+stacking
+   member 1 type "R0M67A" mac-address b8d4e7-bac680
+   member 1 priority 255
+   member 1 flexible-module A type JL083A
+   member 2 type "R0M67A" mac-address b8d4e7-bcd8c0
+   member 2 priority 245
+   member 2 flexible-module A type JL083A
+   exit
+hostname "NCH-CL1-2930M"
+trunk 1/A4,2/A4 trk1 lacp
+timesync ntp
+ntp unicast
+ntp server 10.1.42.20
+ntp enable
+no telnet-server
+no web-management
+ip authorized-managers 0.0.0.0 0.0.0.0 access manager
+ip authorized-managers 10.1.250.240 255.255.255.0 access manager
+ip authorized-managers 10.1.250.241 255.255.255.0 access manager
+ip authorized-managers 10.1.250.242 255.255.255.0 access manager
+ip authorized-managers 10.1.250.243 255.255.255.0 access manager
+ip authorized-managers 10.1.250.244 255.255.255.0 access manager
+ip authorized-managers 10.1.250.245 255.255.255.0 access manager
+ip dns domain-name "ci.st-charles.il.us"
+ip dns server-address priority 1 10.1.42.20
+ip dns server-address priority 2 10.1.42.152
+ip source-interface telnet vlan 10
+interface 1/1
+   name "KEYSCAN_ELEVATOR"
+   exit
+interface 1/6
+   name "UB_PAYMENTS"
+   exit
+interface 1/7
+   name "UB_PAYMENTS2"
+   exit
+interface 1/8
+   name "NCH-FL1-1252N"
+   exit
+interface 1/9
+   name "M.KOENEN_PC"
+   exit
+interface 1/10
+   name "KEYSCAN PANEL"
+   exit
+interface 1/11
+   name "OCH-BAS-2602i"
+   exit
+interface 1/13
+   name "PRINTER_PORT"
+   exit
+interface 1/14
+   name "PRINTER_PORT"
+   exit
+interface 1/15
+   name "PRINTER_PORT"
+   exit
+interface 1/16
+   name "PRINTER_PORT"
+   exit
+interface 1/19
+   name "TO NCH-BAS-3524XL-PWR"
+   exit
+interface 1/25
+   name "Uplink_To_Switch"
+   exit
+interface 1/26
+   name "Payroll_Spare"
+   exit
+interface 1/28
+   name "CVB_DIGIAL_TV"
+   exit
+interface 1/29
+   name "BIAMP_CHAMBERS"
+   exit
+interface 1/30
+   name "Printer Port"
+   exit
+interface 1/31
+   name "PHILLIPS_LIGHTING_CONTROL"
+   exit
+interface 1/34
+   name "Printer Port"
+   exit
+interface 1/35
+   name "CityHallCarillon"
+   exit
+interface 1/36
+   name "Printer Port"
+   exit
+interface 1/37
+   name "Printer Port"
+   exit
+interface 1/38
+   name "Printer Port"
+   exit
+interface 1/39
+   name "Printer Port"
+   exit
+interface 1/40
+   name "Printer Port"
+   exit
+interface 1/41
+   name "Printer Port"
+   exit
+interface 1/42
+   name "Printer Port"
+   exit
+interface 1/44
+   name "Printer Port"
+   exit
+interface 1/45
+   name "Printer Port"
+   exit
+interface 1/46
+   name "Printer Port"
+   exit
+interface 1/47
+   name "ATA191_FinanceFax"
+   exit
+interface 1/A4
+   name "Uplink to PWG-D226-CORE-8325"
+   exit
+interface 2/6
+   name "IS_Testing1"
+   exit
+interface 2/8
+   name "ROOF 1310"
+   exit
+interface 2/9
+   name "COUNCIL_CHAMBERS"
+   exit
+interface 2/14
+   name "AP-2602i-FN MEETING"
+   exit
+interface 2/18
+   name "AP-1121-NCH Meeting Rooms"
+   exit
+interface 2/20
+   name "City_Hall_Camera"
+   exit
+interface 2/21
+   name "FIN_SMART_SAFE"
+   exit
+interface 2/23
+   name "Tracey_Conti"
+   exit
+interface 2/28
+   name "City_Hall_Camera"
+   exit
+interface 2/32
+   name "City_Hall_Camera"
+   exit
+interface 2/34
+   name "ROTUNDA_CAMERA"
+   exit
+interface 2/35
+   name "City_Hall_Camera"
+   exit
+interface 2/37
+   name "UB_CAMERA"
+   exit
+interface 2/42
+   name "VALCOM_SPEAKER"
+   exit
+interface 2/43
+   name "COUNCIL_WAP"
+   exit
+interface 2/44
+   name "VALCOM_SPEAKER"
+   exit
+interface 2/45
+   name "PRINTER_PORT"
+   exit
+interface 2/48
+   name "Mail_Room"
+   exit
+interface 2/A4
+   name "Uplink to PD-DC-CORE-8325"
+   exit
+snmp-server community "s17Y0fSTch@r3LS" operator unrestricted
+snmp-server community "cosc_7384" operator unrestricted
+snmp-server host 10.1.42.16 community "s17Y0fSTch@r3LS"
+snmp-server host 10.1.43.82 community "s17Y0fSTch@r3LS"
+snmp-server trap-source 10.1.1.1
+snmp-server contact "Jason NG" location "New CH"
+oobm
+   ip address dhcp-bootp
+   ipv6 enable
+   ipv6 address dhcp full
+   member 1
+      no ip address
+      ipv6 enable
+      ipv6 address dhcp full
+      exit
+   member 2
+      ip address dhcp-bootp
+      ipv6 enable
+      ipv6 address dhcp full
+      exit
+   exit
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged 1/1,1/4,1/6-1/11,1/13-1/17,1/21-1/24,1/27-1/37,1/39-1/48,2/1-2/48
+   untagged 1/19-1/20,1/A1-1/A3,2/A1-2/A3
+   tagged 1/2-1/3,1/5,1/12,1/18,1/25-1/26,1/38,Trk1
+   ip address dhcp-bootp
+   ipv6 enable
+   ipv6 address dhcp full
+   exit
+vlan 2
+   name "COSC"
+   untagged
+ 1/1-1/3,1/5,1/10,1/12-1/18,1/21-1/25,1/30-1/31,1/34-1/37,1/39-1/46,1/48,2/6,2/1
+6,2/21,2/23,2/38,2/45
+   tagged 1/4,1/19-1/20,1/38,2/19,Trk1
+   no ip address
+   exit
+vlan 5
+   name "VOIP"
+   untagged 1/29,1/47,2/42,2/44
+   tagged
+ 1/2-1/5,1/9,1/12,1/17-1/27,1/32,1/38,1/43,2/1-2/7,2/9-2/13,2/15-2/17,2/19,2/22-
+2/27,2/29-2/31,2/33,2/36,2/38-2/41,2/46-2/48,Trk1
+   no ip address
+   exit
+vlan 10
+   name "NET_MANAGE"
+   untagged Trk1
+   tagged 1/2-1/3,1/5,1/12,1/18-1/20,1/25
+   ip address 10.10.2.51 255.255.0.0
+   exit
+vlan 12
+   name "VIDEO"
+   untagged 2/20,2/28,2/32,2/34-2/35,2/37
+   tagged 1/2-1/3,1/5,1/12,1/18-1/20,Trk1
+   no ip address
+   exit
+vlan 15
+   name "BLDG_CST"
+   tagged 1/2-1/3,1/5,1/12,1/18-1/20,Trk1
+   no ip address
+   exit
+vlan 16
+   name "BLDG_OCH"
+   tagged 1/2-1/3,1/5,1/12,1/18-1/20,Trk1
+   no ip address
+   exit
+vlan 17
+   name "BLDG_NCH"
+   untagged
+ 1/4,1/9,1/26-1/27,1/32-1/33,1/38,2/1-2/5,2/7,2/9-2/13,2/15,2/17,2/19,2/22,2/24-
+2/27,2/29-2/31,2/33,2/36,2/39-2/41,2/46-2/48
+   tagged 1/2-1/3,1/5,1/12,1/18-1/20,1/25,2/6,2/16,Trk1
+   no ip address
+   exit
+vlan 28
+   name "UB_PAYMENTS"
+   untagged 1/6-1/7
+   tagged 1/2-1/3,1/5,1/12,1/18-1/20,Trk1
+   no ip address
+   exit
+vlan 220
+   name "STC_WIFI"
+   tagged 1/2-1/3,1/5,1/12,1/18-1/20,Trk1
+   no ip address
+   exit
+vlan 224
+   name "WIFI_WPA_DMZ"
+   tagged 1/2-1/3,1/5,1/12,1/18-1/20,Trk1
+   no ip address
+   exit
+vlan 247
+   name "ATT_DSL_1"
+   tagged 1/2-1/3,1/5,1/12,1/18-1/20,Trk1
+   no ip address
+   exit
+vlan 249
+   name "Comcast_Backup_ISP"
+   untagged 1/28
+   tagged 1/2-1/3,1/5,1/12,1/18-1/20,Trk1
+   no ip address
+   exit
+vlan 400
+   name "WIFI_DMZ"
+   untagged 1/8,1/11,2/8,2/14,2/18,2/43
+   tagged 1/2-1/3,1/5,1/12,1/18-1/20,Trk1
+   no ip address
+   exit
+vlan 801
+   name "WIRELESS-DMZ"
+   tagged 1/2-1/3,1/5,1/12,1/18-1/20,Trk1
+   no ip address
+   exit
+spanning-tree
+spanning-tree Trk1 priority 4
+spanning-tree mode rapid-pvst
+spanning-tree bpdu-protection-timeout 300
+no tftp server
+no autorun
+no dhcp config-file-update
+no dhcp image-file-update
+no dhcp tr69-acs-url
+password manager
+password operator
+------------------------------------------

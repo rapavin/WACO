@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+  - name: show list
+    arubaoss_command:
+      commands: 
+        - show ver
+        - show run
+      output_file: /home/traversa/automation/backup/St.Charles/{{ inventory_hostname }}.txt

@@ -1,0 +1,19 @@
+---
+- hosts: Cat9K
+  tasks:
+  - name: Default L2 interface
+    ios_l2_interface:
+      name: tenGigabitEthernet1/0/10
+      state: unconfigured
+  - name: Swtichport acc vlan
+    ios_l2_interface:
+      name: tenGigabitEthernet1/0/10
+      mode: access
+      access_vlan: '10'
+  - name: Switchport trunk
+    ios_l2_interface:
+      name: tenGigabitEthernet1/0/11
+      mode: trunk
+      native_vlan: '1'
+      trunk_vlans: 1-10
+    

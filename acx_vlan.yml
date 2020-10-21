@@ -1,0 +1,12 @@
+---
+- name: VLAN
+  hosts: acx_switch
+  collections:
+    - arubanetworks.aoscx
+  tasks:
+    - name: Create Vlans
+      aoscx_vlan:
+        vlan_id: 2
+
+
+

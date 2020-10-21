@@ -1,0 +1,108 @@
+command: show ver
+response: Image stamp:   
+ /ws/swbuildm/rel_yakima_qaoff/code/build/lvm(swbuildm_rel_yakima_qaoff_rel_yaki
+ma)
+                Jun 26 2020 06:00:08
+                WC.16.08.0014
+                861
+Boot Image:     Primary
+
+Boot ROM Version:    WC.17.02.0006
+Active Boot ROM:     Primary
+------------------------------------------
+command: show run
+response: Running configuration:
+
+; JL320A Configuration Editor; Created on release #WC.16.08.0014
+; Ver #14:27.6f.f8.1d.9b.3f.bf.bb.ef.7c.59.fc.6b.fb.9f.fc.ff.ff.37.ef:04
+
+hostname "SB3-CL1-2930F"
+module 1 type jl320a
+flexible-module A type JL083A
+trunk A3-A4 trk1 lacp
+timesync ntp
+ntp unicast
+ntp server 10.1.42.20
+ntp enable
+no telnet-server
+no web-management
+ip authorized-managers 0.0.0.0 0.0.0.0 access manager
+ip authorized-managers 10.1.250.240 255.255.255.0 access manager
+ip authorized-managers 10.1.250.241 255.255.255.0 access manager
+ip authorized-managers 10.1.250.242 255.255.255.0 access manager
+ip authorized-managers 10.1.250.243 255.255.255.0 access manager
+ip authorized-managers 10.1.250.244 255.255.255.0 access manager
+ip authorized-managers 10.1.250.245 255.255.255.0 access manager
+ip dns domain-name "ci.st-charles.il.us"
+ip dns server-address priority 1 10.1.42.20
+ip dns server-address priority 2 10.1.42.152
+ip source-interface telnet vlan 10
+interface A1
+   name "Uplink to WL9-CL1-IE3000"
+   exit
+interface A2
+   name "Uplink to WL3-CL1-2930F"
+   exit
+interface A3
+   name "Uplink to PD-DC-CORE-8325"
+   exit
+interface A4
+   name "Uplink to PWG-D226-CORE-8325"
+   exit
+snmp-server community "s17Y0fSTch@r3LS" operator unrestricted
+snmp-server community "cosc_7384" operator unrestricted
+snmp-server host 10.1.42.16 community "s17Y0fSTch@r3LS"
+snmp-server host 10.1.43.82 community "s17Y0fSTch@r3LS"
+snmp-server trap-source 10.1.1.1
+snmp-server contact "Jason NG" location "Substation 3"
+oobm
+   ip address dhcp-bootp
+   ipv6 enable
+   ipv6 address dhcp full
+   exit
+vlan 1
+   name "DEFAULT_VLAN"
+   no untagged A2
+   untagged 1-24,A1
+   tagged Trk1
+   ip address dhcp-bootp
+   ipv6 enable
+   ipv6 address dhcp full
+   exit
+vlan 2
+   name "COSC"
+   tagged Trk1
+   no ip address
+   exit
+vlan 5
+   name "VOIP"
+   tagged Trk1
+   no ip address
+   exit
+vlan 10
+   name "NET_MANAGE"
+   untagged A2,Trk1
+   ip address 10.10.2.200 255.255.0.0
+   exit
+vlan 301
+   name "ELECTRIC_SCADA"
+   tagged Trk1
+   no ip address
+   exit
+vlan 302
+   name "ELECTRIC_IPNET"
+   tagged Trk1
+   no ip address
+   exit
+spanning-tree
+spanning-tree Trk1 priority 4
+spanning-tree mode rapid-pvst
+spanning-tree bpdu-protection-timeout 300
+no tftp server
+no autorun
+no dhcp config-file-update
+no dhcp image-file-update
+no dhcp tr69-acs-url
+password manager
+password operator
+------------------------------------------

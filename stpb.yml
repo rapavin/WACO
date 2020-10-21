@@ -1,0 +1,167 @@
+---
+- hosts: ancillary
+  tasks:
+  - name: config vlan 2
+    arubaoss_vlan:
+      vlan_id: 2
+      name: COSC
+  - name: config vlan 3
+    arubaoss_vlan:
+      vlan_id: 3
+      name: DMZ_01
+  - name: config vlan 4
+    arubaoss_vlan:
+      vlan_id: 4
+      name: POLICE
+  - name: config vlan 5
+    arubaoss_vlan:
+      vlan_id: 5
+      name: VOIP
+  - name: config vlan 6
+    arubaoss_vlan:
+      vlan_id: 6
+      name: ISCSI1
+  - name: config vlan 7
+    arubaoss_vlan:
+      vlan_id: 7
+      name: ISCSI2
+  - name: config vlan 8
+    arubaoss_vlan:
+      vlan_id: 8
+      name: HV_MGMT
+  - name: config vlan 9
+    arubaoss_vlan:
+      vlan_id: 9
+      name: HV_LIVE
+  - name: config vlan 10
+    arubaoss_vlan:
+      vlan_id: 10
+      name: NET_MANAGE
+  - name: config vlan 11
+    arubaoss_vlan:
+      vlan_id: 11
+      name: FW_FAILOVER
+  - name: config vlan 12
+    arubaoss_vlan:
+      vlan_id: 12
+      name: VIDEO
+  - name: config vlan 13
+    arubaoss_vlan:
+      vlan_id: 13
+      name: BLDG_FD2
+  - name: config vlan 14
+    arubaoss_vlan:
+      vlan_id: 14
+      name: BLDG_FD3
+  - name: config vlan 15
+    arubaoss_vlan:
+      vlan_id: 15
+      name: BLDG_CST
+  - name: config vlan 16
+    arubaoss_vlan:
+      vlan_id: 16
+      name: BLDG_OCH
+  - name: config vlan 17
+    arubaoss_vlan:
+      vlan_id: 17
+      name: BLDG_NCH
+  - name: config vlan 18
+    arubaoss_vlan:
+      vlan_id: 18
+      name: BLDG_PWG
+  - name: config vlan 19
+    arubaoss_vlan:
+      vlan_id: 19
+      name: BLDG_OTHER
+  - name: config vlan 25
+    arubaoss_vlan:
+      vlan_id: 25
+      name: SQL1
+  - name: config vlan 28
+    arubaoss_vlan:
+      vlan_id: 28
+      name: UB_PAYMENTS
+  - name: config vlan 29
+    arubaoss_vlan:
+      vlan_id: 29
+      name: PD_TRAINING
+  - name: config vlan 69
+    arubaoss_vlan:
+      vlan_id: 69
+      name: Steel_Eye
+  - name: config vlan 220
+    arubaoss_vlan:
+      vlan_id: 220
+      name: STC_WIFI
+  - name: config vlan 224
+    arubaoss_vlan:
+      vlan_id: 224
+      name: WIFI_WPA_DMZ
+  - name: config vlan 240
+    arubaoss_vlan:
+      vlan_id: 240
+      name: VZW_PRIVATE
+  - name: config vlan 245
+    arubaoss_vlan:
+      vlan_id: 245
+      name: PHONE_TESTING
+  - name: config vlan 246
+    arubaoss_vlan:
+      vlan_id: 246
+      name: ATT_FIBERONLY
+  - name: config vlan 247
+    arubaoss_vlan:
+      vlan_id: 247
+      name: ATT_DSL_1
+  - name: config vlan 248
+    arubaoss_vlan:
+      vlan_id: 248
+      name: ATT_DSL_2
+  - name: config vlan 249
+    arubaoss_vlan:
+      vlan_id: 249
+      name: Comcast_Backup_ISP
+  - name: config vlan 250
+    arubaoss_vlan:
+      vlan_id: 250
+      name: ATT_INTERNET
+  - name: config vlan 251
+    arubaoss_vlan:
+      vlan_id: 251
+      name: Comcast_Backup
+  - name: config vlan 300
+    arubaoss_vlan:
+      vlan_id: 300
+      name: WATER_SCADA
+  - name: config vlan 301
+    arubaoss_vlan:
+      vlan_id: 301
+      name: ELETRIC_SCADA
+  - name: config vlan 302
+    arubaoss_vlan:
+      vlan_id: 302
+      name: ELETRIC_IPNET
+  - name: config vlan 303
+    arubaoss_vlan:
+      vlan_id: 303
+      name: STP_SCADA
+  - name: config vlan 400
+    arubaoss_vlan:
+      vlan_id: 400
+      name: WIFI_DMZ
+  - name: config vlan 700
+    arubaoss_vlan:
+      vlan_id: 700
+      name: Intergov
+  - name: config vlan 716
+    arubaoss_vlan:
+      vlan_id: 716
+      name: VOIP-External
+  - name: config vlan 720
+    arubaoss_vlan:
+      vlan_id: 720
+      name: Kane-Fiber
+  - name: config vlan 801
+    arubaoss_vlan:
+      vlan_id: 801
+      name: WIRELESS-DMZ

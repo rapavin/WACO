@@ -1,0 +1,26 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Get Date_time fact
+    setup:
+      filter: "ansible_date_time"
+      gather_subset: "!all"
+  - name: Store DTG as fact
+    set_fact:
+      DTG: "{{ ansible_date_time.date }}"
+  - name: Create directory
+    file:
+      path: "/home/traversa/automation/backup/{{ hostvars.localhost.DTG }}"
+      state: directory
+  run_once: true
+
+- hosts: CSR1K
+  tasks:
+  - name: Backup config
+    ios_command:
+      commands: show run
+    register: config
+  - name: Save config
+    copy:
+      content: "{{ config.stdout[0] }}"
+      dest: "/home/traversa/automation/backup/{{ hostvars.localhost.DTG }}/{{ inventory_hostname }}-{{ hostvars.localhost.DTG }}-config.txt"

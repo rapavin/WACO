@@ -1,0 +1,9 @@
+---
+- name: show
+  hosts: acx_switch
+  collections:
+    - arubanetworks.aoscx
+  tasks:
+    - name: Check version
+      aoscx_config:
+        lines: ["vlan 2", "name test"]
