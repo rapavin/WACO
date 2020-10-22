@@ -1,6 +1,6 @@
 ---
 - name: VLAN
-  hosts: acx_switch
+  hosts: Main_MDF
   collections:
     - arubanetworks.aoscx
   tasks:
