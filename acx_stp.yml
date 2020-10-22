@@ -9,4 +9,4 @@
   - name: STP
     aoscx_config:
       lines:
-        - spanning-tree mode rapid-pvst
+        - spanning-tree mode rpvst
