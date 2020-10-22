@@ -1,5 +1,6 @@
 ---
-- hosts: acx_switch
+- name: STP
+  hosts: acx_switch
   collections:
     - arubanetworks.aoscx
   tasks:
