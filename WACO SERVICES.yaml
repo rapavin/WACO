@@ -1,6 +1,6 @@
 ---
 - name: Spanning Tree
-  hosts: all
+  hosts: MAIN_MDF
   collections:
     - arubanetworks.aoscx
   vars:
