@@ -1,4 +1,0 @@
-[CSR1K]
-CSR1K01 ansible_host=10.210.210.152
-CSR1K02 ansible_host=10.210.210.153
-CSR1K03 ansible_host=10.210.210.154
