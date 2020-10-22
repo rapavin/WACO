@@ -6,4 +6,5 @@
   tasks:
   - name: STP
     aoscx_config:
-      lines: ['spanning-tree', 'spanning-tree mode rapid-pvst']
+      lines:
+        - spanning-tree mode rapid-pvst
