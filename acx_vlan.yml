@@ -49,9 +49,9 @@
         vlan_id: 102
         name: IoT
     - name: VLAN 202
-        aoscx_vlan:
-          vlan_id: 202
-          name: AP-Mgmt
+      aoscx_vlan:
+        vlan_id: 202
+        name: AP-Mgmt
     - name: VLAN 1000
       aoscx_vlan:
         vlan_id: 1000
