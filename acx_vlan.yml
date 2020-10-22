@@ -48,7 +48,7 @@
       aoscx_vlan:
         vlan_id: 102
         name: IoT
-      - name: VLAN 202
+    - name: VLAN 202
         aoscx_vlan:
           vlan_id: 202
           name: AP-Mgmt
