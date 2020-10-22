@@ -10,3 +10,4 @@
     aoscx_config:
       lines:
         - spanning-tree mode rapid-pvst
+    save_when: always
