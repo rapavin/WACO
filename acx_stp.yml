@@ -3,8 +3,6 @@
   hosts: acx_switch
   collections:
     - arubanetworks.aoscx
-  vars:
-    - ansible_connection: network_cli
   tasks:
   - name: STP
     aoscx_config:
