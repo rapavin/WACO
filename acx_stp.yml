@@ -1,0 +1,10 @@
+---
+- hosts: acx_switch
+  collections:
+    - arubanetworks.aoscx
+  tasks:
+  - name: STP
+    aoscx_config:
+      lines:
+        - spanning-tree
+        - spanning-tree mode rapid-pvst
