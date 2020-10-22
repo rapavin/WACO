@@ -1,0 +1,13 @@
+---
+- name: Spanning Tree
+  hosts: all
+  collections:
+    - arubanetworks.aoscx
+  vars:
+    - ansible_connection: network_cli
+  tasks:
+  - name: Enabled Spanning Tree
+    aoscx_config:
+      lines:
+        - spanning-tree
+        
