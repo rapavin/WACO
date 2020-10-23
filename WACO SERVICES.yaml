@@ -13,6 +13,7 @@
         - spanning-tree
         - exit
   - name: Spanning Tree Priority
+    hosts: WFM_FHC_MDF_CORE2
     aoscx_config:
       lines: ['spanning-tree priority 1','exit']
         
