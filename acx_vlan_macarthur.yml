@@ -1,13 +1,9 @@
 ---
 - name: VLAN
-  hosts: MAIN_MDF
+  hosts: MACARTHUR
   collections:
     - arubanetworks.aoscx
   tasks:
-    - name: VLAN 1
-      aoscx_vlan:
-        vlan_id: 1
-        name: Legacy-Data
     - name: VLAN 2
       aoscx_vlan:
         vlan_id: 2
@@ -24,6 +20,10 @@
       aoscx_vlan:
         vlan_id: 14
         name: VOIP
+    - name: VLAN20
+      aoscx_vlan:
+        vlan_id: 20
+        name: Legacy-Data
     - name: VLAN 24
       aoscx_vlan:
         vlan_id: 24

@@ -1,6 +1,6 @@
 ---
 - name: STP
-  hosts: acx_switch
+  hosts: WACO
   collections:
     - arubanetworks.aoscx
   vars:
@@ -10,3 +10,16 @@
     aoscx_config:
       lines:
         - spanning-tree mode rpvst
+
+
+- name: Root_Priority
+    hosts: MDF
+    collections:
+      - arubanetworks.aoscx
+    vars:
+      - ansible_connection: network_cli
+    tasks:
+    - name:
+      aoscx_config:
+        lines:
+          - spanning-tree priority 1

@@ -1,0 +1,58 @@
+---
+- name: VLAN
+  hosts: ELM
+  collections:
+    - arubanetworks.aoscx
+  tasks:
+    - name: VLAN 2
+      aoscx_vlan:
+        vlan_id: 2
+        name: Mgmt
+    - name: VLAN 3
+      aoscx_vlan:
+        vlan_id: 3
+        name: Legacy-Voice
+    - name: VLAN 8
+      aoscx_vlan:
+        vlan_id: 8
+        name: Data
+    - name: VLAN 14
+      aoscx_vlan:
+        vlan_id: 14
+        name: VOIP
+    - name: VLAN 24
+      aoscx_vlan:
+        vlan_id: 24
+        name: WLAN-Staff
+    - name: VLAN 28
+      aoscx_vlan:
+        vlan_id: 28
+        name: WLAN-Guest
+    - name: VLAN 32
+      aoscx_vlan:
+        vlan_id: 32
+        name: WLAN-BYOD
+    - name: VLAN 75
+      aoscx_vlan:
+        vlan_id: 75
+        name: LAB
+    - name: VLAN 100
+      aoscx_vlan:
+        vlan_id: 100
+        name: Printers
+    - name: VLAN 102
+      aoscx_vlan:
+        vlan_id: 102
+        name: IoT
+    - name: VLAN 202
+      aoscx_vlan:
+        vlan_id: 202
+        name: AP-Mgmt
+    - name: VLAN 1000
+      aoscx_vlan:
+        vlan_id: 1000
+        name: ELAN
+    - name: VLAN 2000
+      aoscx_vlan:
+        vlan_id: 2000
+        name: SDWAN-TRANS
