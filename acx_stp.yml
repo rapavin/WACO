@@ -6,20 +6,36 @@
   vars:
     - ansible_connection: network_cli
   tasks:
-  - name: STP
-    aoscx_config:
-      lines:
-        - spanning-tree mode rpvst
+    - name: STP
+      aoscx_config:
+        lines:
+          - spanning-tree mode rpvst
 
 
 - name: Root_Priority
-    hosts: MDF
-    collections:
+  hosts: MDF
+  collections:
       - arubanetworks.aoscx
-    vars:
-      - ansible_connection: network_cli
-    tasks:
+  vars:
+    - ansible_connection: network_cli
+  tasks:
     - name:
       aoscx_config:
         lines:
           - spanning-tree priority 1
+
+- name: BPDU_Guard
+  hosts: WACO
+  collections:
+    - arubanetworks.aoscx
+  vars:
+    - ansible_connection: network_cli
+  tasks:
+    - name:
+      aoscx_config:
+        lines:
+          - spanning-tree bpdu-guard
+        parents:
+          - interface 1/1/1-1/1/48
+        match:
+          - none
