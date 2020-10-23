@@ -9,3 +9,5 @@ CSR1K:
   CSR1K_03: 
     Loopback0: "3.3.3.3"  
     
+collections:
+    - arubanetworks.aoscx
