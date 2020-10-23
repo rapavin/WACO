@@ -6,8 +6,9 @@
   vars:
     - ansible_connection: network_cli
   tasks:
-  - name: Enabled Spanning Tree
+  - name: Enabling Spanning Tree
     aoscx_config:
       lines:
+        - configure terminal
         - spanning-tree
         
