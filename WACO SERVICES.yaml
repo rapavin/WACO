@@ -18,9 +18,18 @@
       lines: ['spanning-tree priority 1']
     when: ansible_host == '10.210.210.11'
 
+- name: L2 - Vlans
+  hosts: WFM_FHC_MDF_CORE1
+  collections:
+    - arubanetworks.aoscx
+  vars:
+    - ansible_connection: network_cli
+
   tasks:
-  - name: Create VLAN 300 with description and name
+  - name: L2 Vlan - > Main
     aoscx_vlan:
       vlan_id: 300
       name: UPLINK_VLAN
       description: This is VLAN 300
+    
+
