@@ -9,9 +9,7 @@
   - name: Enabling Spanning Tree
     aoscx_config:
       lines:
-        - configure terminal
         - spanning-tree
-        - exit
       diff_against: running
   - name: Spanning Tree Priority
     aoscx_config:
