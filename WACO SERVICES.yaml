@@ -16,3 +16,4 @@
     aoscx_config:
       lines: ['spanning-tree priority 1','exit']
     when: ansible_host == '10.210.210.16','10.210.210.11'
+      diff_against: running
