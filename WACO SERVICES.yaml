@@ -12,9 +12,9 @@
         - configure terminal
         - spanning-tree
         - exit
+      diff_against: running
   - name: Spanning Tree Priority
     aoscx_config:
       lines: ['spanning-tree priority 1','exit']
-      diff_against: running
     when: ansible_host == '10.210.210.16','10.210.210.11'
       
