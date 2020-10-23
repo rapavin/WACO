@@ -34,6 +34,7 @@
       aoscx_config:
         lines:
           - spanning-tree bpdu-guard
+          - loop-protect
         parents:
           - interface 1/1/1-1/1/48
           - interface 3/1/1-3/1/48
