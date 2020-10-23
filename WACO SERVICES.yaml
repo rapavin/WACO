@@ -25,7 +25,7 @@
   vars:
     - ansible_connection: network_cli
     
-  task:
+  tasks:
   - name: Get Output
     aoscx_facts:
     register: facts_output
