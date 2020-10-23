@@ -21,7 +21,7 @@
 - name: Retrieve all information from the device and save into a variable "facts_output"
   hosts: WFM_FHC_MDF_CORE1
   collections:
-    - arubanetworks.aoscx_facts
+    - arubanetworks.aoscx
   vars:
     - ansible_connection: network_cli
     
