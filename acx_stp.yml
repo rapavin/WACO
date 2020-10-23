@@ -1,6 +1,6 @@
 ---
 - name: STP
-  hosts: all
+  hosts: WFM_FHC_MDF_CORE1
   collections:
     - arubanetworks.aoscx
   vars:
@@ -13,7 +13,7 @@
 
 
 - name: Root_Priority
-  hosts: MDF
+  hosts: WFM_FHC_MDF_CORE1
   collections:
       - arubanetworks.aoscx
   vars:
@@ -25,13 +25,13 @@
           - spanning-tree priority 1
 
 - name: BPDU_Guard
-  hosts: all
+  hosts: WFM_FHC_MDF_CORE1
   collections:
     - arubanetworks.aoscx
   vars:
     - ansible_connection: network_cli
   tasks:
-    - name:
+    - name: BPDUGUARD
       aoscx_config:
         lines:
           - spanning-tree bpdu-guard
