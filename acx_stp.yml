@@ -38,4 +38,4 @@
         parents:
           - interface 1/1/1-1/1/48
         match:
-          - none
+          - 'none'
