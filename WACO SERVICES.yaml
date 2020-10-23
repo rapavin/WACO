@@ -18,16 +18,53 @@
       lines: ['spanning-tree priority 1']
     when: ansible_host == '10.210.210.11'
 
-- name: Retrieve all information from the device and save into a variable "facts_output"
-  hosts: WFM_FHC_MDF_CORE1
-  collections:
-    - arubanetworks.aoscx
-  vars:
-    - ansible_connection: network_cli
-    
-  tasks:
-  - name: Get Output
-    aoscx_facts:
-    register: facts_output
-  - debug:
-      msg: System {{ facts_output }}
+  - name: L2 Vlans -> Main Campus
+    aoscx_vlan:
+      vlan_id: 1
+      name: Legacy-Data
+      vlan_id: 2
+      name: Mgmt
+      vlan_id: 5
+      name: Epic_Storage
+      vlan_id: 8
+      name: Data
+      vlan_id: 10
+      name: HTCHC-DATA
+      vlan_id: 14
+      name: VOIP
+      vlan_id: 20
+      name: HTCHC-VOICE
+      vlan_id: 24
+      name: WLAN-Staff
+      vlan_id: 28
+      name: WLAN-Guest
+      vlan_id: 30
+      name: HTCHC-WIRELESS
+      vlan_id: 32
+      name: WLAN-BYOD
+      vlan_id: 40
+      name: WifiPhone
+      vlan_id: 50
+      name: DMZ
+      vlan_id: 60
+      name: Citrix
+      vlan_id: 65
+      name: CitrixTST
+      vlan_id: 70
+      name: MadCoop
+      vlan_id: 75
+      name: Lab
+      vlan_id: 100
+      name: Printers
+      vlan_id: 102
+      name: IoT
+      vlan_id: 202
+      name: AP-Mgmt
+      vlan_id: 500
+      name: HTCHC-Native
+      vlan_id: 1000
+      name: ELAN
+      vlan_id: 1001
+      name: Madison Cooper WAN
+      vlan_id: 2000
+      name: SDWAN-TRANS
