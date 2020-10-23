@@ -18,6 +18,7 @@
       lines: ['spanning-tree priority 1']
     when: ansible_host == '10.210.210.11'
 
+  tasks:
   - name: Create VLAN 300 with description and name
     aoscx_vlan:
       vlan_id: 300
