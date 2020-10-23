@@ -7,5 +7,4 @@ CSR1K:
   CSR1K_02:
     Loopback0: "2.2.2.2"
   CSR1K_03: 
-    Loopback0: "3.3.3.3"  
-    
+    Loopback0: "3.3.3.3"
