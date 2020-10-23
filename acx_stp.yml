@@ -11,7 +11,6 @@
         lines:
           - spanning-tree mode rpvst
 
-
 - name: Root_Priority
   hosts: WFM_FHC_MDF_CORE1
   collections:
