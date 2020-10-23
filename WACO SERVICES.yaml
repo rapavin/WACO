@@ -14,5 +14,5 @@
         - exit
   - name: Spanning Tree Priority
     aoscx_config:
-      lines: ['spanning-tree priority 1']
+      lines: ['spanning-tree priority 1','exit']
         
