@@ -6,6 +6,7 @@
   vars:
     - ansible_connection: network_cli
   tasks:
+    - name: ENABLING_SPANNING & ENABLING RPVST
       aoscx_config:
         lines:
           - spanning-tree
@@ -18,6 +19,7 @@
   vars:
     - ansible_connection: network_cli
   tasks:
+    - name: SETTING PRIORITY 1 TO MDF SWITCHES
       aoscx_config:
         lines:
           - spanning-tree priority 1
@@ -29,6 +31,7 @@
   vars:
     - ansible_connection: network_cli
   tasks:
+    - name: BPDU_GUARD & LOOP_PROTECT TO ACCESS PORTS
       aoscx_config:
         lines:
           - spanning-tree bpdu-guard
