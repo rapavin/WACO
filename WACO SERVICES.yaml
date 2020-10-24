@@ -1,35 +1,41 @@
 ---
-- name: Spanning Tree
+- name: STP
   hosts: WFM_FHC_MDF_CORE1
   collections:
     - arubanetworks.aoscx
   vars:
     - ansible_connection: network_cli
-  
   tasks:
-  - name: Enabling Spanning Tree
-    aoscx_config:
-      lines:
-        - spanning-tree
-      diff_against: running
-      
-  - name: Spanning Tree Priority
-    aoscx_config:
-      lines: ['spanning-tree priority 1']
-    when: ansible_host == '10.210.210.11'
+    - name: STP
+      aoscx_config:
+        lines:
+          - spanning-tree mode rpvst
 
-- name: L2 - Vlans
+- name: Root_Priority
+  hosts: WFM_FHC_MDF_CORE1
+  collections:
+      - arubanetworks.aoscx
+  vars:
+    - ansible_connection: network_cli
+  tasks:
+    - name:
+      aoscx_config:
+        lines:
+          - spanning-tree priority 1
+
+- name: BPDU_Guard
   hosts: WFM_FHC_MDF_CORE1
   collections:
     - arubanetworks.aoscx
   vars:
     - ansible_connection: network_cli
-
   tasks:
-  - name: L2 Vlan - > Main
-    aoscx_vlan:
-      vlan_id: 300
-      name: UPLINK_VLAN
-      description: This is VLAN 300
-    
-
+    - name: BPDUGUARD
+      aoscx_config:
+        lines:
+          - spanning-tree bpdu-guard
+          - loop-protect
+        parents:
+          - interface 1/1/1-1/1/48
+          - interface 2/1/1-2/1/48
+        match: none
