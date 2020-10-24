@@ -11,7 +11,7 @@
         lines:
           - spanning-tree mode rpvst
 
-- name: Root_Priority
+- name: ROOT_PRIORITY
   hosts: WFM_FHC_MDF_CORE1
   collections:
       - arubanetworks.aoscx
@@ -23,7 +23,7 @@
         lines:
           - spanning-tree priority 1
 
-- name: BPDU_Guard
+- name: BPDU_GUARD
   hosts: WFM_FHC_MDF_CORE1
   collections:
     - arubanetworks.aoscx
@@ -37,5 +37,5 @@
           - loop-protect
         parents:
           - interface 1/1/1-1/1/48
-          - interface 3/1/1-3/1/48
+          - interface 2/1/1-2/1/48
         match: none
