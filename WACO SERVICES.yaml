@@ -1,5 +1,5 @@
 ---
-- name: SERVICES
+- name: SERVICES_ALL
   hosts: WFM_FHC_MDF_CORE1
   collections:
     - arubanetworks.aoscx
@@ -12,6 +12,15 @@
           - spanning-tree
           - spanning-tree mode rpvst
           - spanning-tree bpdu-guard timeout 300
+          - snmp-server community W@c0_Wr1t3
+          - snmp-server community W@c0_R3@d
+          - snmp-server system-contact Support@wacofhc.org
+          - ntp server 10.132.1.15
+          - ntp enable
+          - clock timezone us/central
+          - ip dns domain-name wacofhc.org
+          - ip dns server-address 10.132.1.20
+          - ip dns server-address 10.132.1.21
 
 - name: SERVICES_MDF
   hosts: WFM_FHC_MDF_CORE1
