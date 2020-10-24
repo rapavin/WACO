@@ -11,7 +11,7 @@
         lines:
           - spanning-tree
           - spanning-tree mode rpvst
-          - spanning-tree bpdu-protection-timeout 300
+          - spanning-tree bpdu-guard timeout 300
 
 - name: SERVICES_MDF
   hosts: WFM_FHC_MDF_CORE1
@@ -24,25 +24,6 @@
       aoscx_config:
         lines:
           - spanning-tree priority 1
-
-- name: BPDU_GUARD
-  hosts: WFM_FHC_MDF_CORE1
-  collections:
-    - arubanetworks.aoscx
-  vars:
-    - ansible_connection: network_cli
-  tasks:
-    - name: BPDU_GUARD & LOOP_PROTECT TO ACCESS PORTS
-      aoscx_config:
-        lines:
-          - spanning-tree bpdu-guard
-          - loop-protect
-        parents:
-          - interface 1/1/1-1/1/48
-          - interface 2/1/1-2/1/48
-          - interface 3/1/1-3/1/48
-          - interface 4/1/1-4/1/48
-        match: none
 
 - name: BPDU_GUARD
   hosts: WFM_FHC_MDF_CORE1
