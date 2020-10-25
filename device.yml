@@ -4,4 +4,6 @@
   collections:
     - arubanetworks.aoscx
   tasks:
-    - debug: var=hostvars[inventory_hostname]['ansible_host']
+    - name: Hostname
+      when: var=hostvars[inventory_hostname]['ansible_host'] = "10.210.210.16"
+      msg: "ip"
