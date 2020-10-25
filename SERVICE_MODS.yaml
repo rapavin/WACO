@@ -6,4 +6,4 @@
     - name: Adding or Updating Banner
       aoscx_banner:
         banner_type: banner_exec
-        banner: "\t\t\tUNAUTHORIZED ACCESS TO THIS DEVICE IS PROHIBITED\t\t\t\n\n\tYou must have explicit, authorized permission to access or configure this device.\t\nUnauthorized attempts and actions to access or use this system may result in civil and/or criminal penalties.\t\n\t\tAll activities performed on this device are logged and monitored.\t\t"
+        banner: "\n\t\t\tUNAUTHORIZED ACCESS TO THIS DEVICE IS PROHIBITED\t\t\t\n\n\tYou must have explicit, authorized permission to access or configure this device.\t\nUnauthorized attempts and actions to access or use this system may result in civil and/or criminal penalties.\t\n\t\tAll activities performed on this device are logged and monitored.\t\t"
