@@ -819,3 +819,499 @@
       aoscx_vlan:
         vlan_id: 2000
         name: SDWAN-TRAN
+
+- name: VLANS - MCC
+  hosts: WFM_FHC_MDF_CORE1
+  collections:
+    - arubanetworks.aoscx
+  tasks:
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 1
+        name: Legacy-Data
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 2
+        name: Mgmt
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 3
+        name: Legacy-Voice
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 8
+        name: Data
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 14
+        name: VOIP
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 24
+        name: WLAN-Staff
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 28
+        name: WLAN-Guest
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 32
+        name: WLAN-BYOD
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 75
+        name: LAB
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 100
+        name: Printers
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 102
+        name: IoT
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 202
+        name: AP-Mgmt
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 1000
+        name: ELAN
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 2000
+        name: SDWAN-TRAN
+
+- name: VLANS - MCGREGOR
+  hosts: WFM_FHC_MDF_CORE1
+  collections:
+    - arubanetworks.aoscx
+  tasks:
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 1
+        name: Legacy-Data
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 2
+        name: Mgmt
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 3
+        name: Legacy-Voice
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 8
+        name: Data
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 14
+        name: VOIP
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 24
+        name: WLAN-Staff
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 28
+        name: WLAN-Guest
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 32
+        name: WLAN-BYOD
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 75
+        name: LAB
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 100
+        name: Printers
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 102
+        name: IoT
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 202
+        name: AP-Mgmt
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 1000
+        name: ELAN
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 2000
+        name: SDWAN-TRAN
+
+- name: VLANS - MEYER CENTER
+  hosts: WFM_FHC_MDF_CORE1
+  collections:
+    - arubanetworks.aoscx
+  tasks:
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 1
+        name: Legacy-Data
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 2
+        name: Mgmt
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 3
+        name: Legacy-Voice
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 8
+        name: Data
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 14
+        name: VOIP
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 24
+        name: WLAN-Staff
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 28
+        name: WLAN-Guest
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 32
+        name: WLAN-BYOD
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 75
+        name: LAB
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 100
+        name: Printers
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 102
+        name: IoT
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 202
+        name: AP-Mgmt
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 1000
+        name: ELAN
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 2000
+        name: SDWAN-TRAN
+
+- name: VLANS - MCGREGOR
+  hosts: WFM_FHC_MDF_CORE1
+  collections:
+    - arubanetworks.aoscx
+  tasks:
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 1
+        name: Legacy-Data
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 2
+        name: Mgmt
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 3
+        name: Legacy-Voice
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 8
+        name: Data
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 14
+        name: VOIP
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 24
+        name: WLAN-Staff
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 28
+        name: WLAN-Guest
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 32
+        name: WLAN-BYOD
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 75
+        name: LAB
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 100
+        name: Printers
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 102
+        name: IoT
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 202
+        name: AP-Mgmt
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 1000
+        name: ELAN
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 2000
+        name: SDWAN-TRAN
+
+- name: VLANS - SANTA FE
+  hosts: WFM_FHC_MDF_CORE1
+  collections:
+    - arubanetworks.aoscx
+  tasks:
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 2
+        name: Mgmt
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 3
+        name: Legacy-Voice
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 8
+        name: Data
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 14
+        name: VOIP
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 20
+        name: Legacy-Data
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 24
+        name: WLAN-Staff
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 28
+        name: WLAN-Guest
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 32
+        name: WLAN-BYOD
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 75
+        name: LAB
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 100
+        name: Printers
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 102
+        name: IoT
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 202
+        name: AP-Mgmt
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 1000
+        name: ELAN
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 2000
+        name: SDWAN-TRAN
+
+- name: VLANS - SOUTH 18TH
+  hosts: WFM_FHC_MDF_CORE1
+  collections:
+    - arubanetworks.aoscx
+  tasks:
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 1
+        name: Legacy-Data
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 2
+        name: Mgmt
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 3
+        name: Legacy-Voice
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 8
+        name: Data
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 14
+        name: VOIP
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 24
+        name: WLAN-Staff
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 28
+        name: WLAN-Guest
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 32
+        name: WLAN-BYOD
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 75
+        name: LAB
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 100
+        name: Printers
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 102
+        name: IoT
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 202
+        name: AP-Mgmt
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 1000
+        name: ELAN
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 2000
+        name: SDWAN-TRAN
+
+- name: VLANS - WEST WACO
+  hosts: WFM_FHC_MDF_CORE1
+  collections:
+    - arubanetworks.aoscx
+  tasks:
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 1
+        name: Legacy-Data
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 2
+        name: Mgmt
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 3
+        name: Legacy-Voice
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 8
+        name: Data
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 14
+        name: VOIP
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 24
+        name: WLAN-Staff
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 28
+        name: WLAN-Guest
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 32
+        name: WLAN-BYOD
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 75
+        name: LAB
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 100
+        name: Printers
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 102
+        name: IoT
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 202
+        name: AP-Mgmt
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 1000
+        name: ELAN
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 2000
+        name: SDWAN-TRAN
+
+- name: VLANS - WOMENS HEALTH CENTER
+  hosts: WFM_FHC_MDF_CORE1
+  collections:
+    - arubanetworks.aoscx
+  tasks:
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 1
+        name: Legacy-Data
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 2
+        name: Mgmt
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 3
+        name: Legacy-Voice
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 8
+        name: Data
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 14
+        name: VOIP
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 24
+        name: WLAN-Staff
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 28
+        name: WLAN-Guest
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 32
+        name: WLAN-BYOD
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 75
+        name: LAB
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 100
+        name: Printers
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 102
+        name: IoT
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 202
+        name: AP-Mgmt
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 1000
+        name: ELAN
+    - name: Create VLAN
+      aoscx_vlan:
+        vlan_id: 2000
+        name: SDWAN-TRAN
