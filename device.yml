@@ -4,10 +4,6 @@
     - arubanetworks.aoscx
   tasks:
     - name: SVI'S
-      vars:
-        id: 2
-        ip_add: 10.101.2.10/24
-        svi_des: Mgmt
       aoscx_vlan_interface:
         vlan_id: "{{ item.id }}"
         description: "{{ item.svi_des }}"
