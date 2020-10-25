@@ -1,7 +1,7 @@
 - name: REST_BANNER
   hosts: WFM_FHC_MDF_CORE1
   collections:
-      - arubanetworks.aoscx
+    - arubanetworks.aoscx
   tasks:
     - name: BANNER
       aoscx_banner:
@@ -11,7 +11,7 @@
 - name: VLANS - MAIN
   hosts: WFM_FHC_MDF_CORE1
   collections:
-      - arubanetworks.aoscx
+    - arubanetworks.aoscx
   tasks:
     - name: Create VLAN 1 with description
       aoscx_vlan:
@@ -137,7 +137,7 @@
 - name: VLANS - AHEC
   hosts: WFM_FHC_MDF_CORE1
   collections:
-      - arubanetworks.aoscx
+    - arubanetworks.aoscx
   tasks:
     - name: Create VLAN
       aoscx_vlan:
@@ -203,7 +203,7 @@
 - name: VLANS - ANNEX
   hosts: WFM_FHC_MDF_CORE1
   collections:
-      - arubanetworks.aoscx
+    - arubanetworks.aoscx
   tasks:
     - name: Create VLAN
       aoscx_vlan:
@@ -265,7 +265,7 @@
 - name: VLANS - AUSTIN AVE
   hosts: WFM_FHC_MDF_CORE1
   collections:
-      - arubanetworks.aoscx
+    - arubanetworks.aoscx
   tasks:
     - name: Create VLAN
       aoscx_vlan:
@@ -327,7 +327,7 @@
 - name: VLANS - BELLMEAD
   hosts: WFM_FHC_MDF_CORE1
   collections:
-      - arubanetworks.aoscx
+    - arubanetworks.aoscx
   tasks:
     - name: Create VLAN
       aoscx_vlan:
@@ -389,7 +389,7 @@
 - name: VLANS - BELLS HILL
   hosts: WFM_FHC_MDF_CORE1
   collections:
-      - arubanetworks.aoscx
+    - arubanetworks.aoscx
   tasks:
     - name: Create VLAN
       aoscx_vlan:
@@ -451,7 +451,7 @@
 - name: VLANS - ELM
   hosts: WFM_FHC_MDF_CORE1
   collections:
-      - arubanetworks.aoscx
+    - arubanetworks.aoscx
   tasks:
     - name: Create VLAN
       aoscx_vlan:
@@ -513,7 +513,7 @@
 - name: VLANS - MACARTHUR
   hosts: WFM_FHC_MDF_CORE1
   collections:
-      - arubanetworks.aoscx
+    - arubanetworks.aoscx
   tasks:
     - name: Create VLAN
       aoscx_vlan:
@@ -575,7 +575,7 @@
 - name: VLANS - ELM
   hosts: WFM_FHC_MDF_CORE1
   collections:
-      - arubanetworks.aoscx
+    - arubanetworks.aoscx
   tasks:
     - name: Create VLAN
       aoscx_vlan:
@@ -637,7 +637,7 @@
 - name: VLANS - MACARTHUR
   hosts: WFM_FHC_MDF_CORE1
   collections:
-      - arubanetworks.aoscx
+    - arubanetworks.aoscx
   tasks:
     - name: Create VLAN
       aoscx_vlan:
@@ -699,7 +699,7 @@
 - name: VLANS - MADISON COOPER
   hosts: WFM_FHC_MDF_CORE1
   collections:
-      - arubanetworks.aoscx
+    - arubanetworks.aoscx
   tasks:
     - name: Create VLAN
       aoscx_vlan:
@@ -761,7 +761,7 @@
 - name: VLANS - MLK
   hosts: WFM_FHC_MDF_CORE1
   collections:
-      - arubanetworks.aoscx
+    - arubanetworks.aoscx
   tasks:
     - name: Create VLAN
       aoscx_vlan:
