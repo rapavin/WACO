@@ -1,8 +1,8 @@
 - name: GATHER_FACTS
   hosts: WFM_FHC_MDF_CORE1
+  gather_facts: yes
   collections:
     - arubanetworks.aoscx
   tasks:
     - name: Retrieve all information from the device and save into a variable "facts_output"
-      aoscx_facts:
-        gather_subset: [management_interface[ip]]
+        - debug: var=hostvars[inventory_hostname]['ansible_env'].SSH_CONNECTION.split(' ')[2]
