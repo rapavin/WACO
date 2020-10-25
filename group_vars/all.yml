@@ -8,3 +8,5 @@ CSR1K:
     Loopback0: "2.2.2.2"
   CSR1K_03: 
     Loopback0: "3.3.3.3"
+
+ansible_password: Pr0curve
