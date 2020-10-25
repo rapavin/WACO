@@ -13,7 +13,7 @@
         - { id: '1', ip_add: '10.133.1.1/24', svi_des: 'Legacy-Data', helper: ' ' }
         - { id: '2', ip_add: '10.101.2.1/24', svi_des: 'Mgmt', helper: ' ' }
         - { id: '5', ip_add: ' ', svi_des: 'Epic_Storage', helper: ' ' }
-        - { id: '8', ip_add: '10.101.8.1/22', svi_des: 'Data', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '8', ip_add: '10.101.8.1/22', svi_des: 'Data', helper: ['10.132.1.20'] }
         - { id: '10', ip_add: ' ', svi_des: 'HTCHC-DATA', helper: ' ' }
         - { id: '14', ip_add: '10.101.14.1/23', svi_des: 'VOIP', helper: ['10.132.1.20', '10.132.1.21'] }
         - { id: '20', ip_add: '10.133.1.1/24', svi_des: 'HTCHC-VOICE', helper: ' ' }
