@@ -1,9 +1,5 @@
 - name: VLAN
   hosts: WFM_FHC_MDF_CORE1
-  collections:
-      - arubanetworks.aoscx
-  vars:
-    - ansible_connection: httpapi
   tasks:
     - name: VLAN
       aoscx_vlan:
