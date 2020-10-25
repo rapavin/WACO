@@ -5,5 +5,4 @@
   tasks:
     - name: Retrieve all information from the device and save into a variable "facts_output"
       aoscx_facts:
-        ansible_net_mgmt_intf_status: ['ip']
-      register: facts_subset_output
+        gather_subset: ['management_interface']
