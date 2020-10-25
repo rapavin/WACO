@@ -7,5 +7,5 @@
     - name: Hostname
       ansible.builtin.debug:
         msg: "ip"
-      when: var=hostvars[inventory_hostname]['ansible_host'] == "10.210.210.16"
+        when: var=hostvars[inventory_hostname]['ansible_host'] == "10.210.210.16"
       
