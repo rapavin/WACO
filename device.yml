@@ -4,4 +4,4 @@
   collections:
     - arubanetworks.aoscx
   tasks:
-    - debug: var=hostvars[inventory_hostname]
+    - debug: var=hostvars[inventory_hostname]['ansible_host']
