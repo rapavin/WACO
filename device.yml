@@ -5,5 +5,5 @@
   tasks:
     - name: Retrieve all information from the device and save into a variable "facts_output"
       aoscx_facts:
-        gather_subset: ['ansible_net_mgmt_intf_status']
-      register: facts_output
+        gather_subset: ['host_name', 'fans']
+      register: register: facts_subset_output
