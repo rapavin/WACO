@@ -13,123 +13,123 @@
   collections:
       - arubanetworks.aoscx
   tasks:
-   - name: Create VLAN 1 with description
+    - name: Create VLAN 1 with description
      aoscx_vlan:
       vlan_id: 1
       name: Legacy-Data
       admin_state: up
-  - name: Create VLAN 2 with description
-    aoscx_vlan:
-      vlan_id: 2
-      name: Mgmt
-      admin_state: up
-  - name: Create VLAN 5 with description
-    aoscx_vlan:
-      vlan_id: 5
-      name: Epic_Storage
-      admin_state: up
-  - name: Create VLAN 8 with description
-    aoscx_vlan:
-      vlan_id: 8
-      name: Data
-      admin_state: up
-  - name: Create VLAN 10 with description
-    aoscx_vlan:
-      vlan_id: 10
-      name: HTCHC-DATA
-      admin_state: up
-  - name: Create VLAN 14 with description
-    aoscx_vlan:
-      vlan_id: 14
-      name: VOIP
-      admin_state: up
-  - name: Create VLAN 20 with description
-    aoscx_vlan:
-      vlan_id: 20
-      name: HTCHC-VOICE
-      admin_state: up
-  - name: Create VLAN 24 with description
-    aoscx_vlan:
-      vlan_id: 24
-      name: WLAN-Staff
-      admin_state: up
-  - name: Create VLAN 28 with description
-    aoscx_vlan:
-      vlan_id: 28
-      name: WLAN-Guest
-      admin_state: up
-  - name: Create VLAN 30 with description
-    aoscx_vlan:
-      vlan_id: 30
-      name: HTCHC-WIRELESS
-      admin_state: up
-  - name: Create VLAN 32 with description
-    aoscx_vlan:
-      vlan_id: 32
-      name: WLAN-BYOD
-      admin_state: up
-  - name: Create VLAN 40 with description
-    aoscx_vlan:
-      vlan_id: 40
-      name: WifiPhone
-      admin_state: up
-  - name: Create VLAN 50 with description
-    aoscx_vlan:
-      vlan_id: 50
-      name: DMZ
-      admin_state: up
-  - name: Create VLAN 60 with description
-    aoscx_vlan:
-      vlan_id: 60
-      name: Citrix
-      admin_state: up
-  - name: Create VLAN 65 with description
-    aoscx_vlan:
-      vlan_id: 65
-      name: CitrixTST
-      admin_state: up
-  - name: Create VLAN 70 with description
-    aoscx_vlan:
-      vlan_id: 70
-      name: MadCoop
-      admin_state: up
-  - name: Create VLAN 75 with description
-    aoscx_vlan:
-      vlan_id: 75
-      name: Lab
-      admin_state: up
-  - name: Create VLAN 100 with description
-    aoscx_vlan:
-      vlan_id: 100
-      name: Printers
-      admin_state: up
-  - name: Create VLAN 102 with description
-    aoscx_vlan:
-      vlan_id: 102
-      name: IoT
-      admin_state: up
-  - name: Create VLAN 202 with description
-    aoscx_vlan:
-      vlan_id: 202
-      name: AP-Mgmt
-      admin_state: up
-  - name: Create VLAN 500 with description
-    aoscx_vlan:
-      vlan_id: 500
-      name: HTCHC-Native
-      admin_state: up
-  - name: Create VLAN 1000 with description
-    aoscx_vlan:
-      vlan_id: 1000
-      name: ELAN
-      admin_state: up
-  - name: Create VLAN 1001 with description
-    aoscx_vlan:
-      vlan_id: 1001
-      name: Madison Cooper WAN
-      admin_state: up
-  - name: Create VLAN 2000 with description
-    aoscx_vlan:
-      vlan_id: 2000
-      name: SDWAN-TRANS
-      admin_state: up
+    - name: Create VLAN 2 with description
+      aoscx_vlan:
+        vlan_id: 2
+        name: Mgmt
+        admin_state: up
+    - name: Create VLAN 5 with description
+      aoscx_vlan:
+        vlan_id: 5
+        name: Epic_Storage
+        admin_state: up
+    - name: Create VLAN 8 with description
+      aoscx_vlan:
+        vlan_id: 8
+        name: Data
+        admin_state: up
+    - name: Create VLAN 10 with description
+      aoscx_vlan:
+        vlan_id: 10
+        name: HTCHC-DATA
+        admin_state: up
+    - name: Create VLAN 14 with description
+      aoscx_vlan:
+        vlan_id: 14
+        name: VOIP
+        admin_state: up
+    - name: Create VLAN 20 with description
+      aoscx_vlan:
+        vlan_id: 20
+        name: HTCHC-VOICE
+        admin_state: up
+    - name: Create VLAN 24 with description
+      aoscx_vlan:
+        vlan_id: 24
+        name: WLAN-Staff
+        admin_state: up
+    - name: Create VLAN 28 with description
+      aoscx_vlan:
+        vlan_id: 28
+        name: WLAN-Guest
+        admin_state: up
+    - name: Create VLAN 30 with description
+      aoscx_vlan:
+        vlan_id: 30
+        name: HTCHC-WIRELESS
+        admin_state: up
+    - name: Create VLAN 32 with description
+      aoscx_vlan:
+        vlan_id: 32
+        name: WLAN-BYOD
+        admin_state: up
+    - name: Create VLAN 40 with description
+      aoscx_vlan:
+        vlan_id: 40
+        name: WifiPhone
+        admin_state: up
+    - name: Create VLAN 50 with description
+      aoscx_vlan:
+        vlan_id: 50
+        name: DMZ
+        admin_state: up
+    - name: Create VLAN 60 with description
+      aoscx_vlan:
+        vlan_id: 60
+        name: Citrix
+        admin_state: up
+    - name: Create VLAN 65 with description
+      aoscx_vlan:
+        vlan_id: 65
+        name: CitrixTST
+        admin_state: up
+    - name: Create VLAN 70 with description
+      aoscx_vlan:
+        vlan_id: 70
+        name: MadCoop
+        admin_state: up
+    - name: Create VLAN 75 with description
+      aoscx_vlan:
+        vlan_id: 75
+        name: Lab
+        admin_state: up
+    - name: Create VLAN 100 with description
+      aoscx_vlan:
+        vlan_id: 100
+        name: Printers
+        admin_state: up
+    - name: Create VLAN 102 with description
+      aoscx_vlan:
+        vlan_id: 102
+        name: IoT
+        admin_state: up
+    - name: Create VLAN 202 with description
+      aoscx_vlan:
+        vlan_id: 202
+        name: AP-Mgmt
+        admin_state: up
+    - name: Create VLAN 500 with description
+      aoscx_vlan:
+        vlan_id: 500
+        name: HTCHC-Native
+        admin_state: up
+    - name: Create VLAN 1000 with description
+      aoscx_vlan:
+        vlan_id: 1000
+        name: ELAN
+        admin_state: up
+    - name: Create VLAN 1001 with description
+      aoscx_vlan:
+        vlan_id: 1001
+        name: Madison Cooper WAN
+        admin_state: up
+    - name: Create VLAN 2000 with description
+      aoscx_vlan:
+        vlan_id: 2000
+        name: SDWAN-TRANS
+        admin_state: up
