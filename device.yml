@@ -6,6 +6,6 @@
     - name: SVI
       aoscx_vlan_interface:
         - vlan_id: 2
-            admin_state: up
-            ipv4: ['1.1.1.1']
+          admin_state: up
+          ipv4: ['1.1.1.1']
     
