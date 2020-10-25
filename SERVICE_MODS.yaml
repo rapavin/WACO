@@ -14,7 +14,7 @@
       - arubanetworks.aoscx
   tasks:
    - name: Create VLAN 1 with description
-    aoscx_vlan:
+     aoscx_vlan:
       vlan_id: 1
       name: Legacy-Data
       admin_state: up
