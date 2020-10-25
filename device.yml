@@ -1,7 +1,11 @@
-- name: 
+- name: DEVICE SPECIFIC
   hosts: WFM_FHC_MDF_CORE1
   collections:
     - arubanetworks.aoscx
   tasks:
-    - name: Hostname
-      
+    - name: SVI
+      aoscx_vlan_interface:
+        - vlan_id: 2
+            admin_state: up
+            ipv4: ['1.1.1.1']
+    
