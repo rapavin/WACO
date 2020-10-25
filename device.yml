@@ -3,9 +3,8 @@
   collections:
     - arubanetworks.aoscx
   tasks:
-    - name: Create VLAN Interface 100
+    - name: SVI'S
       aoscx_vlan_interface:
-        vlan_id: 100
-        description: UPLINK_VLAN
-        ipv4: ['10.10.20.1/24']
+        vlan_id: 2
+        description: "{{ ip_add }}"
     
