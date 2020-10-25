@@ -1,12 +1,14 @@
 - name: DEVICE SPECIFIC
   hosts: WFM_FHC_MDF_CORE1
-  vars:
-    ip_add: 10.101.2.10/24
   collections:
     - arubanetworks.aoscx
   tasks:
     - name: SVI'S
+      vars:
+        ip_add: 10.101.2.10/24
+        svi_des: Mgmt
       aoscx_vlan_interface:
         vlan_id: 2
-        description: "{{ ip_add }}"
+        description: "{{ svi_des }}"
+        ipv4: "{{ ip_add }}"
     
