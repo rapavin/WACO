@@ -199,3 +199,66 @@
       aoscx_vlan:
         vlan_id: 2000
         name: SDWAN-TRANS
+        
+- name: VLANS - ANNEX
+  hosts: WFM_FHC_MDF_CORE1
+  collections:
+      - arubanetworks.aoscx
+  tasks:
+	- name: Create VLAN
+	  aoscx_vlan:
+		  vlan_id: 1
+	    name: Create VLAN
+	- name: Create VLAN
+	  aoscx_vlan:	
+	    name: Legacy-Data
+		  vlan_id: 2
+	- name: Create VLAN
+	  aoscx_vlan:	
+	    name: Mgmt
+		  vlan_id: 3
+	- name: Create VLAN
+	  aoscx_vlan:	
+	    name: Legacy-Voice
+		  vlan_id: 8
+	- name: Create VLAN
+	  aoscx_vlan:	
+	    name: Data
+		  vlan_id: 14
+	- name: Create VLAN
+	  aoscx_vlan:	
+	    name: VOIP
+  		vlan_id: 24
+	- name: Create VLAN
+	  aoscx_vlan:	
+	    name: WLAN-Staff
+  		vlan_id: 28
+	- name: Create VLAN
+	  aoscx_vlan:	
+	    name: WLAN-Guest
+	  	vlan_id: 32
+	- name: Create VLAN
+	  aoscx_vlan:	
+	    name: WLAN-BYOD
+		  vlan_id: 75
+	- name: Create VLAN
+	  aoscx_vlan:	
+	    name: LAB
+  		vlan_id: 100
+	- name: Create VLAN
+	  aoscx_vlan:	
+	    name: Printers
+	  	vlan_id: 102
+	- name: Create VLAN
+	  aoscx_vlan:	
+	    name: IoT
+		  vlan_id: 202
+	- name: Create VLAN
+	  aoscx_vlan:	
+	    name: AP-Mgmt
+  		vlan_id: 1000
+	- name: Create VLAN
+	  aoscx_vlan:	
+	    name: ELAN
+	  	vlan_id: 2000
+	    name: SDWAN-TRANS
