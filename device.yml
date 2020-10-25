@@ -4,5 +4,4 @@
   collections:
     - arubanetworks.aoscx
   tasks:
-    - name: Retrieve all information from the device and save into a variable "facts_output"
     - debug: var=hostvars[inventory_hostname]['ansible_env'].SSH_CONNECTION.split(' ')[2]
