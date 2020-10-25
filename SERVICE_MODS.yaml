@@ -10,75 +10,75 @@
   tasks:
     - name: VLAN
       aoscx_vlan:
-        vlan_id: 1
-        name: Legacy-Data
-        admin_state: up
-        vlan_id: 2
-        name: Mgmt
-        admin_state: up
-        vlan_id: 5
-        name: Epic_Storage
-        admin_state: up
-        vlan_id: 8
-        name: Data
-        admin_state: up
-        vlan_id: 10
-        name: HTCHC-DATA
-        admin_state: up
-        vlan_id: 14
-        name: VOIP
-        admin_state: up
-        vlan_id: 20
-        name: HTCHC-VOICE
-        admin_state: up
-        vlan_id: 24
-        name: WLAN-Staff
-        admin_state: up
-        vlan_id: 28
-        name: WLAN-Guest
-        admin_state: up
-        vlan_id: 30
-        name: HTCHC-WIRELESS
-        admin_state: up
-        vlan_id: 32
-        name: WLAN-BYOD
-        admin_state: up
-        vlan_id: 40
-        name: WifiPhone
-        admin_state: up
-        vlan_id: 50
-        name: DMZ
-        admin_state: up
-        vlan_id: 60
-        name: Citrix
-        admin_state: up
-        vlan_id: 65
-        name: CitrixTST
-        admin_state: up
-        vlan_id: 70
-        name: MadCoop
-        admin_state: up
-        vlan_id: 75
-        name: Lab
-        admin_state: up
-        vlan_id: 100
-        name: Printers
-        admin_state: up
-        vlan_id: 102
-        name: IoT
-        admin_state: up
-        vlan_id: 202
-        name: AP-Mgmt
-        admin_state: up
-        vlan_id: 500
-        name: HTCHC-Native
-        admin_state: up
-        vlan_id: 1000
-        name: ELAN
-        admin_state: up
-        vlan_id: 1001
-        name: Madison Cooper WAN
-        admin_state: up
-        vlan_id: 2000
-        name: SDWAN-TRANS
-        admin_state: up
+        - vlan_id: 1
+          name: Legacy-Data
+          admin_state: up
+        - vlan_id: 2
+          name: Mgmt
+          admin_state: up
+        - vlan_id: 5
+          name: Epic_Storage
+          admin_state: up
+        - vlan_id: 8
+          name: Data
+          admin_state: up
+        - vlan_id: 10
+          name: HTCHC-DATA
+          admin_state: up
+        - vlan_id: 14
+          name: VOIP
+          admin_state: up
+        - vlan_id: 20
+          name: HTCHC-VOICE
+          admin_state: up
+        - vlan_id: 24
+          name: WLAN-Staff
+          admin_state: up
+        - vlan_id: 28
+          name: WLAN-Guest
+          admin_state: up
+        - vlan_id: 30
+          name: HTCHC-WIRELESS
+          admin_state: up
+        - vlan_id: 32
+          name: WLAN-BYOD
+          admin_state: up
+        - vlan_id: 40
+          name: WifiPhone
+          admin_state: up
+        - vlan_id: 50
+          name: DMZ
+          admin_state: up
+        - vlan_id: 60
+          name: Citrix
+          admin_state: up
+        - vlan_id: 65
+          name: CitrixTST
+          admin_state: up
+        - vlan_id: 70
+          name: MadCoop
+          admin_state: up
+        - vlan_id: 75
+          name: Lab
+          admin_state: up
+        - vlan_id: 100
+          name: Printers
+          admin_state: up
+        - vlan_id: 102
+          name: IoT
+          admin_state: up
+        - vlan_id: 202
+          name: AP-Mgmt
+          admin_state: up
+        - vlan_id: 500
+          name: HTCHC-Native
+          admin_state: up
+        - vlan_id: 1000
+          name: ELAN
+          admin_state: up
+        - vlan_id: 1001
+          name: Madison Cooper WAN
+          admin_state: up
+        - vlan_id: 2000
+          name: SDWAN-TRANS
+          admin_state: up
