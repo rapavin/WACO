@@ -358,3 +358,57 @@
         - { id: '202', ip_add: '10.113.202.1/24', svi_des: 'AP-Mgmt', helper: ['10.132.1.20', '10.132.1.21'] }
         - { id: '1000', ip_add: '192.168.99.9/24', svi_des: 'ELAN', helper: ' ' }
         - { id: '2000', ip_add: '10.255.255.49/30', svi_des: 'SDWAN-TRANS', helper: ' ' }
+
+- name: DEVICE SPECIFIC
+  hosts: WFM_FHC_MDF_CORE1
+  collections:
+    - arubanetworks.aoscx
+  tasks:
+    - name: SVI - SANTA FE
+      aoscx_vlan_interface:
+        vlan_id: "{{ item.id }}"
+        description: "{{ item.svi_des }}"
+        ipv4: "{{ item.ip_add }}"
+        ip_helper_address: "{{ item.helper }}"
+      loop:
+        - { id: '2', ip_add: '10.114.2.1/24', svi_des: 'Mgmt', helper: ' ' }
+        - { id: '3', ip_add: '10.133.26.1/24', svi_des: 'Legacy-Voice', helper: ' ' }
+        - { id: '8', ip_add: '10.114.8.1/22', svi_des: 'Data', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '14', ip_add: '10.114.14.1/23', svi_des: 'VOIP', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '20', ip_add: '10.132.26.1/24', svi_des: 'Legacy-Data', helper: ' ' }
+        - { id: '24', ip_add: '10.114.24.1/22', svi_des: 'WLAN-Staff', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '28', ip_add: '10.114.28.1/22', svi_des: 'WLAN-Guest', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '32', ip_add: '10.114.32.1/24', svi_des: 'WLAN-BYOD', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '75', ip_add: '10.114.75.1/24', svi_des: 'LAB', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '100', ip_add: '10.114.100.1/24', svi_des: 'Printers', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '102', ip_add: '10.114.102.1/24', svi_des: 'IoT', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '202', ip_add: '10.114.202.1/24', svi_des: 'AP-Mgmt', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '1000', ip_add: '192.168.99.16/24', svi_des: 'ELAN', helper: ' ' }
+        - { id: '2000', ip_add: '10.255.255.53/30', svi_des: 'SDWAN-TRANS', helper: ' ' }
+
+- name: DEVICE SPECIFIC
+  hosts: WFM_FHC_MDF_CORE1
+  collections:
+    - arubanetworks.aoscx
+  tasks:
+    - name: SVI - SOUTH 18TH
+      aoscx_vlan_interface:
+        vlan_id: "{{ item.id }}"
+        description: "{{ item.svi_des }}"
+        ipv4: "{{ item.ip_add }}"
+        ip_helper_address: "{{ item.helper }}"
+      loop:
+        - { id: '1', ip_add: '10.132.10.1/24', svi_des: 'Legacy-Data', helper: ' ' }
+        - { id: '2', ip_add: '10.115.2.1/24', svi_des: 'Mgmt', helper: ' ' }
+        - { id: '3', ip_add: '10.133.10.1/24', svi_des: 'Legacy-Voice', helper: ' ' }
+        - { id: '8', ip_add: '10.115.8.1/22', svi_des: 'Data', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '14', ip_add: '10.115.14.1/23', svi_des: 'VOIP', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '24', ip_add: '10.115.24.1/22', svi_des: 'WLAN-Staff', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '28', ip_add: '10.115.28.1/22', svi_des: 'WLAN-Guest', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '32', ip_add: '10.115.32.1/24', svi_des: 'WLAN-BYOD', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '75', ip_add: '10.115.75.1/24', svi_des: 'LAB', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '100', ip_add: '10.115.100.1/24', svi_des: 'Printers', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '102', ip_add: '10.115.102.1/24', svi_des: 'IoT', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '202', ip_add: '10.115.202.1/24', svi_des: 'AP-Mgmt', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '1000', ip_add: '192.168.99.3/24', svi_des: 'ELAN', helper: ' ' }
+        - { id: '2000', ip_add: '10.255.255.57/30', svi_des: 'SDWAN-TRANS   ', helper: ' ' }
