@@ -277,3 +277,30 @@
         - { id: '202', ip_add: '10.110.202.1/24', svi_des: 'AP-Mgmt', helper: ['10.132.1.20', '10.132.1.21'] }
         - { id: '1000', ip_add: '192.168.99.11/24', svi_des: 'ELAN', helper: ' ' }
         - { id: '2000', ip_add: '10.255.255.37/30', svi_des: 'SDWAN-TRANS', helper: ' ' }
+
+- name: DEVICE SPECIFIC
+  hosts: WFM_FHC_MDF_CORE1
+  collections:
+    - arubanetworks.aoscx
+  tasks:
+    - name: SVI - MCC
+      aoscx_vlan_interface:
+        vlan_id: "{{ item.id }}"
+        description: "{{ item.svi_des }}"
+        ipv4: "{{ item.ip_add }}"
+        ip_helper_address: "{{ item.helper }}"
+      loop:
+        - { id: '1', ip_add: '10.132.19.1/24', svi_des: 'Legacy-Data', helper: ' ' }
+        - { id: '2', ip_add: '10.111.2.1/24', svi_des: 'Mgmt', helper: ' ' }
+        - { id: '3', ip_add: '10.133.19.1/24', svi_des: 'Legacy-Voice', helper: ' ' }
+        - { id: '8', ip_add: '10.111.8.1/22', svi_des: 'Data', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '14', ip_add: '10.111.14.1/23', svi_des: 'VOIP', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '24', ip_add: '10.111.24.1/22', svi_des: 'WLAN-Staff', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '28', ip_add: '10.111.28.1/22', svi_des: 'WLAN-Guest', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '32', ip_add: '10.111.32.1/24', svi_des: 'WLAN-BYOD', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '75', ip_add: '10.111.75.1/24', svi_des: 'LAB', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '100', ip_add: '10.111.100.1/24', svi_des: 'Printers', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '102', ip_add: '10.111.102.1/24', svi_des: 'IoT', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '202', ip_add: '10.111.202.1/24', svi_des: 'AP-Mgmt', helper: ['10.132.1.20', '10.132.1.21'] }
+        - { id: '1000', ip_add: '192.168.99.8/24', svi_des: 'ELAN', helper: ' ' }
+        - { id: '2000', ip_add: '10.255.255.41/30', svi_des: 'SDWAN-TRANS ', helper: ' ' }
