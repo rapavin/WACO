@@ -1,6 +1,6 @@
 ---
 - name: igmp_snooping
-  hosts: WFM_FHC_MDF_CORE1
+  hosts: all
   collections:
     - arubanetworks.aoscx
   vars:
