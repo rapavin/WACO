@@ -1,0 +1,12 @@
+---
+- name: dns
+  hosts: all
+  collections:
+    - arubanetworks.aoscx
+  tasks:
+    - name: DNS
+      aoscx_config:
+        lines:
+          - ip dns domain-name wacofhc.org
+          - ip dns server-address 10.132.1.20
+          - ip dns server-address 10.132.1.21
