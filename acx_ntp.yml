@@ -8,7 +8,7 @@
   tasks:
     - name: NTP
       aoscx_config:
-        line:
+        lines:
           - ntp enable
           - ntp server ntp.wacofhc.org
           - clock timezone america/chicago
