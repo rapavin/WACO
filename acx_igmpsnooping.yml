@@ -1,0 +1,11 @@
+---
+- name: igmp_snooping
+  hosts: all
+  collections:
+    - arubanetworks.aoscx
+  tasks:
+    - name: igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 1, vlan 2, vlan 3, vlan 5, vlan 8, vlan 10, vlan 14, vlan 20, vlan 24, vlan 28, vlan 30, vlan 32, vlan 40, vlan 50, vlan 60, vlan 65, vlan 70, vlan 75, vlan 100, vlan 102, vlan 202, vlan 500, vlan 1000, vlan 1001, vlan 2000
