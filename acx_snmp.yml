@@ -1,0 +1,12 @@
+---
+- name: snmp
+  hosts: all
+  collections:
+    - arubanetworks.aoscx
+  tasks:
+    - name: SNMP
+      aoscx_config:
+        lines:
+          - snmp-server community W@c0_Wr1t3
+          - snmp-server community W@c0_R3@d
+          - snmp-server system-contact Support@wacofhc.org
