@@ -3,6 +3,8 @@
   hosts: WFM_FHC_MDF_CORE1
   collections:
     - arubanetworks.aoscx
+  vars:
+    - ansible_connection: network_cli  
   tasks:
     - name: SNMP
       aoscx_config:
