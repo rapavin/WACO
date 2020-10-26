@@ -6,9 +6,133 @@
   vars:
     - ansible_connection: network_cli
   tasks:
-    - name: igmp_snooping
+    - name: vlan 1 igmp_snooping
       aoscx_config:
         lines:
           - ip igmp snooping enable
-        parents: vlan 1, vlan 2, vlan 3, vlan 5, vlan 8, vlan 10, vlan 14, vlan 20, vlan 24, vlan 28, vlan 30, vlan 32, vlan 40, vlan 50, vlan 60, vlan 65, vlan 70, vlan 75, vlan 100, vlan 102, vlan 202, vlan 500, vlan 1000, vlan 1001, vlan 2000
-        match: none
+        parents: vlan 1
+    - name: vlan 2 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 2
+    - name: vlan 3 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 3
+    - name: vlan 1 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 3
+    - name: vlan 5 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 5
+    - name: vlan 8 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 8
+    - name: vlan 10 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 10
+    - name: vlan 14 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 14
+    - name: vlan 20 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 20
+    - name: vlan 24 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 24
+    - name: vlan 28 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 28
+    - name: vlan 30 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 30
+    - name: vlan 32 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 32
+    - name: vlan 40 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 40
+    - name: vlan 50 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 50
+    - name: vlan 60 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 60
+    - name: vlan 65 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 65
+    - name: vlan 70 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 70
+    - name: vlan 75 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 75
+    - name: vlan 100 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 100
+    - name: vlan 102 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 102
+    - name: vlan 202 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 202
+    - name: vlan 500 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 500
+    - name: vlan 1000 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 1000
+    - name: vlan 1001 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 1001
+    - name: vlan 2000 igmp_snooping
+      aoscx_config:
+        lines:
+          - ip igmp snooping enable
+        parents: vlan 2000
