@@ -1,12 +1,10 @@
 ---
-- name: banner
-  hosts: acx_switch
+- name: REST_BANNER
+  hosts: all
   collections:
     - arubanetworks.aoscx
   tasks:
-    - name: Add Banner
+    - name: BANNER
       aoscx_banner:
-        banner_type: banner
-        banner: |
-          UNAUTHORIZED ACCESS TO THIS DEVICE IS PROHIBITED 
-          You must have explicit, authorized permission to access or configure this device. Unauthorized attempts and actions to access or use this system may result in civil and/or criminal penalties. All activities performed on this device are logged and monitored.
+        banner_type: banner_exec
+        banner: "\n\t\t\tUNAUTHORIZED ACCESS TO THIS DEVICE IS PROHIBITED\t\t\t\n\n\tYou must have explicit, authorized permission to access or configure this device.\t\nUnauthorized attempts and actions to access or use this system may result in civil and/or criminal penalties.\t\n\t\tAll activities performed on this device are logged and monitored.\t\t\n"
